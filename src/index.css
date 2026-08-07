@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-obsidian text-gray-300 overflow-x-hidden font-sans selection:bg-indigo selection:text-white;
+  }
+}
+
+/* Custom Scrollbar styled for a premium dashboard look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0B0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1C20;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2C303B;
+}
+
+/* High-end gradient text backgrounds */
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400;
+}
+
+.text-gradient-indigo {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-bright via-indigo to-indigo-bright;
+}
+
+.text-gradient-brass {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brass-light via-brass to-brass-hover;
+}
+
+/* Custom telemetry pulse animations */
+@keyframes telemetry-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+}
+
+.animate-telemetry {
+  animation: telemetry-pulse 3s infinite;
+}
