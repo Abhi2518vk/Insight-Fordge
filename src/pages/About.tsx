@@ -9,24 +9,24 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
   const partners = [
     {
-      name: 'Alexander Vance',
-      role: 'Principal Data Architect',
+      name: 'Abhilash R',
+      role: 'Lead AI & Automation Engineer',
       pedigree: 'ex-Palantir, ex-Microsoft Data',
       desc: 'Expertise in high-volume SQL tuning, dimensional database schema design, and Snowflake data warehouses.',
       specialty: 'ETL Pipeline Optimization',
       avatar: 'AV'
     },
     {
-      name: 'Elena Rostova',
-      role: 'Lead AI & Automation Engineer',
+      name: 'Rahul R',
+      role: 'Principal Data Architect,
       pedigree: 'ex-Stripe, ex-Twilio',
       desc: 'Specializes in serverless webhook development, queue management under load, and intelligent Cron business automations.',
       specialty: 'API & Pipeline Engineering',
       avatar: 'ER'
     },
     {
-      name: 'Marcus Sterling',
-      role: 'Senior Full-Stack Architect',
+      name: 'Anadh',
+      role: ''Principal Data Architect',
       pedigree: 'ex-Vercel, ex-AWS',
       desc: 'Directs custom web application pipelines. Focused on clean TypeScript monorepos, React, and serverless edge delivery.',
       specialty: 'Type-Safe App Systems',
