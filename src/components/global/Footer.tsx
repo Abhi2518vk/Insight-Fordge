@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-semibold tracking-wide text-text-primary text-base">INSIGHT FORGE</span>
-                <span className="font-mono text-[9px] text-accent-gold tracking-widest uppercase"></span>
+                <span className="font-mono text-[9px] text-accent-gold tracking-widest uppercase">System Engineers</span>
               </div>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
@@ -52,13 +52,13 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <div className="flex flex-col gap-4">
             <h4 className="font-display font-medium text-text-primary text-sm tracking-wider uppercase">Secure Channels</h4>
             <div className="flex flex-col gap-3">
-              <a href="mailto:partner@insightforge.site" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
+              <a href="mailto:insightforge.site@gmail.com" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
                 <Mail className="w-4 h-4 text-brand-primary" />
-                <span>partner@insightforge.site</span>
+                <span>insightforge.site@gmail.com</span>
               </a>
-              <a href="tel:+18005553282" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
+              <a href="tel:+917594835882" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
                 <Phone className="w-4 h-4 text-brand-primary" />
-                <span>+1 (800) 555-DATA</span>
+                <span>+91 7594 835 882</span>
               </a>
               <div className="flex items-center gap-3 text-text-secondary text-sm">
                 <MessageSquare className="w-4 h-4 text-brand-primary" />

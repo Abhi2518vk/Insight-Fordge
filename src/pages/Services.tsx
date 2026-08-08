@@ -14,13 +14,12 @@ export const Services: React.FC = () => {
       tag: 'Data Architecture',
       desc: 'We engineer secure transactional ETL pipelines and scalable SQL database schemas to render real-time, direct-query executive KPI dashboards with zero reporting delay.',
       details: [
-        'Power BI & Tableau Dashboard Development',
-        'Executive & Operational KPI Dashboards',
-        'Database Schema Design & Migration Maps',
-        'SQL Performance Tuning & Optimization',
-        'ETL Pipeline & Data Warehouse Orchestration',
-        'Predictive Analytics & Customer Dashboards',
-        'Excel Automation & Process Digitalization'
+        'Business Dashboard Development',
+        'Sales & Financial Analytics',
+        'Customer & Inventory Analytics',
+        'Data Preparation & Automation',
+        'SQL Database & Reporting',
+        'Business Reporting'
       ],
       stack: ['Power BI', 'Tableau', 'SQL', 'Snowflake', 'BigQuery', 'PostgreSQL', 'Excel']
     },

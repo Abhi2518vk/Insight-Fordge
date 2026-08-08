@@ -82,25 +82,30 @@ export const Contact: React.FC = () => {
               </div>
             </a>
 
-            <a href="tel:+18005553282" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
+            <a href="tel:+917594835882" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
               <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Toll-Free Line</span>
+                <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Partner Line</span>
                 <span className="text-sm font-semibold text-text-primary">+91 7594 835 882</span>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50">
-              <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary">
+            <a
+              href="https://wa.me/917594835882?text=Hello%20Insight%20Forge%2C%20I%20would%20like%20to%20schedule%20a%20product%2Farchitecture%20audit."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group"
+            >
+              <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
                 <MessageSquare className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Direct WhatsApp Secure</span>
-                <span className="text-sm font-semibold text-text-primary">Verified Partnership Channel</span>
+                <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest font-semibold text-brand-primary">Direct WhatsApp Secure</span>
+                <span className="text-sm font-semibold text-text-primary">+91 7594 835 882</span>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Secure alignment warning */}

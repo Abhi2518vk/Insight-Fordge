@@ -21,7 +21,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bg-surface border border-border-custom shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
               <span className="w-2 h-2 rounded-full bg-accent-gold animate-ping" />
-              <span className="font-mono text-[10px] uppercase tracking-widest text-accent-gold font-medium">Principal-Led Technology Advisory</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-accent-gold font-semibold">Boutique Technology Consulting & System Architecture</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-text-primary leading-[1.1]">

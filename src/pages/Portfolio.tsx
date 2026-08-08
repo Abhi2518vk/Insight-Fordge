@@ -8,20 +8,40 @@ export const Portfolio: React.FC = () => {
 
   const cases = [
     {
-      title: 'Real-time Dispatch Routing & Spatial DB Optimization',
-      client: 'Global Logistics Operator ($50M Rev)',
-      stat: '78% Reductions in ETL Latency',
-      situation: 'Manual warehouse part allocations and crash timeouts inside legacy routing systems was causing $14,000 in daily operational leakage.',
-      transformation: 'Refactored raw spatial PostGIS indexing inside PostgreSQL cluster nodes. Engineered multi-stage automated Python ETL schedules syncing with active fleet telemetry maps.',
-      results: ['Latency compressed from 22 hours to sub-10ms ranges', 'Complete visual dispatch dashboard synced with zero gateway delays', 'Full client ownership handover with type-safe Next.js microservices']
+      title: 'DriveRigt: Frictionless Car Rental Product Design & Analytics Engine',
+      client: 'Digital Product Concept / Prototype',
+      stat: 'Simulated Drop-off Reduced by 45%',
+      situation: 'Traditional car rental platforms experience massive drop-off rates exceeding 60% during checkout due to slow database queries, complex vehicle filtering, and obscure insurance configuration screens.',
+      transformation: 'Engineered a high-fidelity product prototype utilizing Next.js, React, and Figma wireframing. Authored a thorough Product Requirement Document (PRD) detailing vehicle database schemas, real-time availability APIs, and secure payment flows, and paired it with a simulated analytics dashboard tracing user conversion funnels.',
+      results: [
+        'Designed a high-conversion 3-step rental checkout flow optimized for mobile and web screens.',
+        'Created a complete relational database schema for fleets, bookings, and customer profiles.',
+        'Constructed comprehensive UI/UX interactive wireframes mapping spatial maps and booking filters.'
+      ]
     },
     {
-      title: 'Automated Financial Forecasting & Snowflake Data Pipelines',
-      client: 'B2B FinTech Platform',
-      stat: 'calculation speed reduced from 4m to 800ms',
-      situation: 'Finance models were crashing due to unoptimized database calculations, lagging quarters behind accurate reports.',
-      transformation: 'Refactored unoptimized ORM database layers into raw parameterized SQL queries inside AWS Lambda cron pipelines, syncing raw indicators with Snowflake.',
-      results: ['Transactional reports refreshed automatically in real-time', 'CPU server queue loads decreased by over 60%', 'Zero data pipeline timeout errors logged over 90 days']
+      title: 'WhatsApp Custom Scheduler & Enterprise Product Teardown',
+      client: 'Messaging Optimization & Automation Blueprint',
+      stat: '100% Automated Message Delivery Flows',
+      situation: 'E-commerce and SaaS platforms suffer high operational overhead when manually scheduling and delivering targeted notifications, lacking scheduled CRM automation, webhook failure handling, and custom user delivery windows.',
+      transformation: 'Conducted an exhaustive product teardown of WhatsApp messaging mechanics. Designed and engineered an automated scheduling middleware blueprint using the WhatsApp Business API, scheduled serverless Python Cron triggers, and a comprehensive PRD specifying retry backoffs, API rate-limits, and delivery status webhooks.',
+      results: [
+        'Formulated custom-built Cron schedules automating user-selected messaging delivery windows.',
+        'Designed intuitive Figma wireframes for the Admin Scheduler console and notification delivery matrices.',
+        'Structured PRD outlining JSON payload formats, rate-limit thresholds, and MySQL queue schema states.'
+      ]
+    },
+    {
+      title: 'Student Peer Dashboard & Cohort Analytics Portal',
+      client: 'Academic Cohort BI Solution',
+      stat: '0s Dashboard Query Latency',
+      situation: 'Academic team leads and educators lacked consolidated real-time tracking of student peer evaluations, team milestones, and historical grade analytics, causing delayed intervention and siloed performance reviews.',
+      transformation: 'Engineered a centralized Business Intelligence portal utilizing MySQL, star-schema data modeling, and Power BI dashboards. Consolidated unstructured, disparate Excel spreadsheets into a single normalized relational database, writing optimized SQL views to serve real-time grade charts and interactive peer evaluation heatmaps.',
+      results: [
+        'Re-engineered fragmented spreadsheet data into a clean, query-optimized star-schema database.',
+        'Created high-impact Power BI visuals showcasing evaluation distributions and engagement metrics.',
+        'Established sub-second visual query loading speeds for instant performance and milestone auditing.'
+      ]
     }
   ];
 

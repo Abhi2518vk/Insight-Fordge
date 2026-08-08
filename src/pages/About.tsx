@@ -9,28 +9,36 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
   const partners = [
     {
-      name: 'Abhilash R',
-      role: 'Lead AI & Automation Engineer',
+      name: 'Alexander Vance',
+      role: 'Principal Data Architect',
       pedigree: 'ex-Palantir, ex-Microsoft Data',
       desc: 'Expertise in high-volume SQL tuning, dimensional database schema design, and Snowflake data warehouses.',
       specialty: 'ETL Pipeline Optimization',
       avatar: 'AV'
     },
     {
-      name: 'Rahul R',
-      role: 'Principal Data Architect,
+      name: 'Elena Rostova',
+      role: 'Lead AI & Automation Engineer',
       pedigree: 'ex-Stripe, ex-Twilio',
       desc: 'Specializes in serverless webhook development, queue management under load, and intelligent Cron business automations.',
       specialty: 'API & Pipeline Engineering',
       avatar: 'ER'
     },
     {
-      name: 'Anadh',
-      role: ''Principal Data Architect',
+      name: 'Marcus Sterling',
+      role: 'Senior Full-Stack Architect',
       pedigree: 'ex-Vercel, ex-AWS',
       desc: 'Directs custom web application pipelines. Focused on clean TypeScript monorepos, React, and serverless edge delivery.',
       specialty: 'Type-Safe App Systems',
       avatar: 'MS'
+    },
+    {
+      name: 'Anandhu Suresh',
+      role: 'Lead Growth & Product Marketing',
+      pedigree: 'ex-GrowthLab, ex-Acquire',
+      desc: 'Orchestrates customer analytics strategies, user-acquisition frameworks, and product-led pipeline conversions.',
+      specialty: 'Data-Driven Acquisition',
+      avatar: 'AS'
     }
   ];
 
@@ -43,12 +51,12 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
           Senior Architectural Leadership. No Delegation to Juniors.
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          At Insight Forge, we do not run a traditional bloated agency or an offshore subcontractor pool. We are a specialized partnership of three ex-enterprise engineering leaders who personally write, review, and deploy your critical database pipelines and applications.
+          At Insight Forge, we do not run a traditional bloated agency or an offshore subcontractor pool. We are a specialized partnership of four senior engineering and product growth leaders who personally write, review, and deploy your critical database pipelines and applications.
         </p>
       </div>
 
       {/* 2. Partner portraits grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
         {partners.map((partner, idx) => (
           <CardGlass key={idx} className="flex flex-col gap-6 p-8 items-start justify-between">
             <div>

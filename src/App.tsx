@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Header } from './components/global/Header';
 import { Footer } from './components/global/Footer';
+import { WhatsAppButton } from './components/ui/WhatsAppButton';
 
 // Pages
 import { Home } from './pages/Home';
@@ -52,6 +53,7 @@ export default function App() {
         </main>
       </div>
       <Footer setCurrentPage={setCurrentPage} />
+      <WhatsAppButton />
     </div>
   );
 }
