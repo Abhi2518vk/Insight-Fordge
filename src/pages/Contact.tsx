@@ -72,13 +72,13 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <a href="mailto:partner@insightforge.site" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
+            <a href="mailto:insightforge.site@gmail.com" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
               <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Email</span>
-                <span className="text-sm font-semibold text-text-primary">partner@insightforge.site</span>
+                <span className="text-sm font-semibold text-text-primary">insightforge.site@gmail.com</span>
               </div>
             </a>
 
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Toll-Free Line</span>
-                <span className="text-sm font-semibold text-text-primary">+1 (800) 555-DATA</span>
+                <span className="text-sm font-semibold text-text-primary">+91 7594 835 882</span>
               </div>
             </a>
 
