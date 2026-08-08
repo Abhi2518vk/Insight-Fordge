@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-semibold tracking-wide text-text-primary text-base">INSIGHT FORGE</span>
-                <span className="font-mono text-[9px] text-accent-gold tracking-widest uppercase">System Engineers</span>
+                <span className="font-mono text-[9px] text-accent-gold tracking-widest uppercase"></span>
               </div>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
