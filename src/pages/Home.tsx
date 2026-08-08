@@ -41,10 +41,10 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
                 <span>Schedule Architecture Review</span>
               </button>
               <button
-                onClick={() => setCurrentPage('portfolio')}
+                onClick={() => setCurrentPage('services')}
                 className="px-6 py-3.5 rounded-lg font-display text-sm font-medium bg-bg-surface text-text-primary border border-border-custom hover:border-accent-gold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Inspect Active Sandboxes</span>
+                <span>Inspect Our Services</span>
               </button>
             </div>
 
@@ -196,13 +196,13 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               Watch our telemetry and querying engines in action.
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed">
-              We do not ask clients to trust empty sales copy. Trigger our simulated direct-query telemetry sandbox above or deep-dive into our custom dashboard environments in the interactive Portfolio.
+              We do not ask clients to trust empty sales copy. Trigger our simulated direct-query telemetry sandbox above or deep-dive into our active client project architectures in our Portfolio.
             </p>
             <button
               onClick={() => setCurrentPage('portfolio')}
               className="font-mono text-xs text-accent-gold border-b border-accent-gold hover:text-text-primary hover:border-text-primary transition-colors pb-1 cursor-pointer"
             >
-              Explore all sandboxes &rarr;
+              Explore all projects &rarr;
             </button>
           </div>
           <div className="lg:col-span-7 w-full bg-bg-surface border border-border-custom rounded-xl p-8 flex flex-col gap-6">

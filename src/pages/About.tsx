@@ -9,34 +9,34 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
   const partners = [
     {
-      name: 'Alexander Vance',
-      role: 'Principal Data Architect',
-      pedigree: 'ex-Palantir, ex-Microsoft Data',
-      desc: 'Expertise in high-volume SQL tuning, dimensional database schema design, and Snowflake data warehouses.',
-      specialty: 'ETL Pipeline Optimization',
-      avatar: 'AV'
-    },
-    {
-      name: 'Elena Rostova',
+      name: 'ABHILASH R',
       role: 'Lead AI & Automation Engineer',
-      pedigree: 'ex-Stripe, ex-Twilio',
-      desc: 'Specializes in serverless webhook development, queue management under load, and intelligent Cron business automations.',
-      specialty: 'API & Pipeline Engineering',
-      avatar: 'ER'
+      pedigree: 'AI Architect & Workflow Automation Specialist',
+      desc: 'Expertise in serverless AI agent nodes, complex API integrations, automated OCR/invoice systems, and CRM/ERP webhook integrations.',
+      specialty: 'Intelligent Automations',
+      avatar: 'AR'
     },
     {
-      name: 'Marcus Sterling',
-      role: 'Senior Full-Stack Architect',
-      pedigree: 'ex-Vercel, ex-AWS',
-      desc: 'Directs custom web application pipelines. Focused on clean TypeScript monorepos, React, and serverless edge delivery.',
-      specialty: 'Type-Safe App Systems',
-      avatar: 'MS'
+      name: 'RAHUL R',
+      role: 'Data Scientist',
+      pedigree: 'Advanced Statistical Modeling & Analytics Lead',
+      desc: 'Specializes in pandas/NumPy pipelines, forecasting models, retention profiling, customer segmentation, and automated metrics analysis.',
+      specialty: 'Predictive & Data Models',
+      avatar: 'RR'
     },
     {
-      name: 'Anandhu Suresh',
+      name: 'ANANDH R',
+      role: 'Data Architect',
+      pedigree: 'Enterprise Schema & Database Optimization Engineer',
+      desc: 'Architects high-volume star-schemas, dimensional data warehouses, advanced ETL pipelines, and sub-second Power BI/Tableau systems.',
+      specialty: 'Schema & BI Engineering',
+      avatar: 'AN'
+    },
+    {
+      name: 'ANANDHU SURESH',
       role: 'Lead Growth & Product Marketing',
-      pedigree: 'ex-GrowthLab, ex-Acquire',
-      desc: 'Orchestrates customer analytics strategies, user-acquisition frameworks, and product-led pipeline conversions.',
+      pedigree: 'Product Strategist & Acquisition Architect',
+      desc: 'Orchestrates full-funnel customer analytics strategies, conversion rate optimizations, growth marketing analytics, and data-driven product advisory.',
       specialty: 'Data-Driven Acquisition',
       avatar: 'AS'
     }

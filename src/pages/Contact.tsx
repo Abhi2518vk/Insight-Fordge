@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CardGlass } from '../components/ui/CardGlass';
-import { Shield, MessageSquare, Phone, Mail, Terminal, Calendar } from 'lucide-react';
+import { Shield, MessageSquare, Phone, Mail, Terminal, Calendar, ArrowRight } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -50,6 +50,24 @@ export const Contact: React.FC = () => {
     sessionStorage.removeItem('insight-forge-contact');
   };
 
+  // Prepares the WhatsApp pre-filled link with the user's filled form details
+  const getWhatsAppBackupUrl = () => {
+    const selectedPillars = [];
+    if (formData.bi) selectedPillars.push('BI & Analytics');
+    if (formData.ai) selectedPillars.push('AI & Automation');
+    if (formData.dev) selectedPillars.push('Software Engineering');
+
+    const text = `Hello Insight Forge,
+I have just submitted a project inquiry:
+Name: ${formData.name || 'N/A'}
+Company: ${formData.company || 'N/A'}
+Email: ${formData.email || 'N/A'}
+Pillars: ${selectedPillars.join(', ') || 'None selected'}
+Bottleneck: ${formData.bottleneck || 'N/A'}`;
+
+    return `https://wa.me/917594835882?text=${encodeURIComponent(text)}`;
+  };
+
   return (
     <div className="py-20 max-w-7xl mx-auto px-6">
       {/* 1. Header */}
@@ -59,7 +77,7 @@ export const Contact: React.FC = () => {
           Initiate Your Project Architecture Audit.
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          Submit your query to receive custom database designs and pipeline models. All submission coordinates are automatically protected under our unilateral NDA protocol.
+          Submit your query to receive custom database designs and pipeline models. All submission coordinates are automatically protected under our unilateral NDA protocol and escalated directly to our principal partners.
         </p>
       </div>
 
@@ -98,8 +116,10 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group"
             >
-              <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
-                <MessageSquare className="w-5 h-5" />
+              <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-[#25D366] group-hover:text-accent-gold transition-colors">
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.637-1.03-5.114-2.905-6.99C16.554 1.874 14.077.842 11.44.842c-5.441 0-9.864 4.422-9.867 9.867-.001 1.748.469 3.453 1.36 4.985l-1.01 3.692 3.784-.993zm11.233-5.94c-.31-.154-1.83-.901-2.11-.1.01-.278-.125-.412-.228-.562l-.744-1.09c-.113-.165-.2-.31-.05-.53.11-.16.49-.57.74-.88.11-.14.2-.31.1-.53-.1-.22-.92-2.22-1.26-3.04-.33-.8-.67-.69-.92-.7-.24-.01-.52-.01-.8.01-.28.01-.73.11-1.12.53-.38.42-1.47 1.44-1.47 3.5s1.5 4.07 1.7 4.35c.21.28 2.95 4.5 7.15 6.31 1 .43 1.78.69 2.39.88 1.01.32 1.93.28 2.66.17.81-.12 2.49-1.02 2.84-2 1.01-1.01.31-1.92.23-2.08-.07-.16-.27-.24-.58-.4z" />
+                </svg>
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest font-semibold text-brand-primary">Direct WhatsApp Secure</span>
@@ -127,13 +147,34 @@ export const Contact: React.FC = () => {
               <div className="w-14 h-14 rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center text-accent-gold mb-2">
                 <Terminal className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-semibold text-xl text-text-primary">Inquiry Securely Transmitted</h3>
+              <h3 className="font-display font-semibold text-xl text-text-primary">Inquiry Securely Logged & Transmitted</h3>
               <p className="text-text-secondary text-sm leading-relaxed max-w-md">
-                Alexander Vance and Elena Rostova have been assigned as your principal leads. Tap below to reserve your direct 30-minute system audit slot using our calendar.
+                Your specifications have been securely parsed and encrypted in our partner pipeline. ABHILASH R and ANANDH R have been assigned as your lead auditors.
               </p>
 
+              {/* WhatsApp direct pass link block */}
+              <div className="w-full bg-bg-dark border border-border-custom rounded-xl p-6 mb-4 text-left flex flex-col gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse" />
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-secondary font-semibold">Instant Escalation Backup</span>
+                </div>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  Want an instant partner response? Use our WhatsApp dispatcher to send your form contents directly to our lead engineers in one click.
+                </p>
+                <a
+                  href={getWhatsAppBackupUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-lg bg-[#25D366] hover:bg-[#20ba5a] text-white font-mono text-xs font-semibold text-center flex items-center justify-center gap-2 transition-all duration-300"
+                >
+                  <MessageSquare className="w-4 h-4 fill-white text-[#25D366]" />
+                  <span>Send Inquiries via WhatsApp</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+
               {showCalendly ? (
-                <div className="w-full bg-bg-dark border border-border-custom rounded-xl p-4 sm:p-8 animate-fade-in">
+                <div className="w-full bg-bg-dark border border-border-custom rounded-xl p-4 sm:p-8 animate-fade-in text-left">
                   <div className="flex items-center justify-between mb-4 pb-2 border-b border-border-custom/50">
                     <span className="font-mono text-[10px] text-accent-gold uppercase tracking-widest">Calendly scheduling integration</span>
                     <span className="w-2.5 h-2.5 rounded-full bg-green-500" />

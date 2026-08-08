@@ -14,12 +14,12 @@ export const Services: React.FC = () => {
       tag: 'Data Architecture',
       desc: 'We engineer secure transactional ETL pipelines and scalable SQL database schemas to render real-time, direct-query executive KPI dashboards with zero reporting delay.',
       details: [
-        'Business Dashboard Development',
-        'Sales & Financial Analytics',
-        'Customer & Inventory Analytics',
-        'Data Preparation & Automation',
-        'SQL Database & Reporting',
-        'Business Reporting'
+        'Business Dashboard Development: Interactive Power BI & Tableau dashboards, Executive KPI systems, Role-based user reports & self-service views',
+        'Sales & Financial Analytics: Product/regional performance metrics, Sales, revenue & profit analysis, Monthly, quarterly & yearly statistical trends',
+        'Customer & Inventory Analytics: Customer segmentation & purchase patterns, Retention/repeat-purchase reports, Stock level monitoring & fast/slow-moving inventory tracking',
+        'Data Preparation & Automation: Automated recurring reports, Excel data cleaning & validation, Power Query workflow transformations',
+        'SQL Database & Reporting: Database design & query optimization, Excel-to-SQL migration support, Data extraction, reporting & performance tuning',
+        'Business Reporting: Weekly & monthly management reporting systems, Operational performance reviews, Clear KPI definitions & structural reporting templates'
       ],
       stack: ['Power BI', 'Tableau', 'SQL', 'Snowflake', 'BigQuery', 'PostgreSQL', 'Excel']
     },
@@ -119,15 +119,27 @@ export const Services: React.FC = () => {
           {/* Panel Right - Deliverables Checklist */}
           <div className="lg:col-span-7 bg-bg-dark/60 border border-border-custom rounded-xl p-6 sm:p-8">
             <h4 className="font-display font-medium text-sm text-text-primary uppercase tracking-wider mb-6 pb-2 border-b border-border-custom/50">Core Deliverables Checklists</h4>
-            <ul className="flex flex-col gap-4">
-              {currentPillar.details.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
-                  <div className="flex flex-col">
-                    <span className="text-text-primary text-sm font-medium">{item}</span>
-                  </div>
-                </li>
-              ))}
+            <ul className="flex flex-col gap-5">
+              {currentPillar.details.map((item, idx) => {
+                const parts = item.split(': ');
+                const title = parts[0];
+                const bullets = parts[1] ? parts[1].split(', ') : [];
+                return (
+                  <li key={idx} className="flex items-start gap-3 border-b border-border-custom/20 pb-4 last:border-b-0 last:pb-0">
+                    <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex flex-col gap-1">
+                      <span className="text-text-primary text-sm font-semibold tracking-wide">{title}</span>
+                      {bullets.length > 0 && (
+                        <ul className="list-disc pl-5 text-xs text-text-secondary flex flex-col gap-0.5">
+                          {bullets.map((bullet, bidx) => (
+                            <li key={bidx} className="hover:text-text-primary transition-colors">{bullet}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

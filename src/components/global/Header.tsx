@@ -33,8 +33,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
             <div className="absolute -inset-0.5 bg-brand-primary/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10" />
           </div>
           <div className="flex flex-col">
-            <span className="font-display font-semibold tracking-wide text-text-primary text-lg">INSIGHT FORGE</span>
-            <span className="font-mono text-[10px] text-accent-gold tracking-widest uppercase">System Engineers</span>
+            <span className="font-display font-semibold tracking-wide text-text-primary text-lg animate-pulse-slow">INSIGHT FORGE</span>
+            <span className="font-mono text-[10px] text-accent-gold tracking-widest uppercase font-medium">Analytics & Systems</span>
           </div>
         </div>
 
