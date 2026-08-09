@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
           </div>
           <div className="flex flex-col">
             <span className="font-display font-semibold tracking-wide text-text-primary text-lg animate-pulse-slow">INSIGHT FORGE</span>
-            <span className="font-mono text-[10px] text-accent-gold tracking-widest uppercase font-medium">Analytics & Systems</span>
+            <span className="font-mono text-[9px] text-accent-gold tracking-wider uppercase font-semibold">Data Consulting & System Architecture</span>
           </div>
         </div>
 

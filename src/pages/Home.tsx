@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Terminal, Shield, Zap, RefreshCw, Layers, Database, Activity, Cpu } from 'lucide-react';
 import { DashboardDemo } from '../components/sandbox/DashboardDemo';
 import { CardGlass } from '../components/ui/CardGlass';
 import { BadgeTech } from '../components/ui/BadgeTech';
+import { AuditModal } from '../components/ui/AuditModal';
 
 interface HomeProps {
   setCurrentPage: (page: string) => void;
 }
 
 export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
+  const [isAuditOpen, setIsAuditOpen] = useState(false);
+
   return (
     <div className="flex flex-col">
+      {/* Audit Modal */}
+      <AuditModal isOpen={isAuditOpen} onClose={() => setIsAuditOpen(false)} />
+
       {/* 1. Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-20 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-primary/10 via-bg-dark to-bg-dark">
         {/* Subtle grid mesh background */}
@@ -34,17 +40,17 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
               <button
-                onClick={() => setCurrentPage('contact')}
+                onClick={() => setIsAuditOpen(true)}
                 className="px-6 py-3.5 rounded-lg font-display text-sm font-medium bg-brand-primary text-text-primary hover:bg-brand-secondary transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_15px_rgba(79,70,229,0.25)] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Terminal className="w-4 h-4" />
-                <span>Schedule Architecture Review</span>
+                <span>Schedule a Data & Software Audit</span>
               </button>
               <button
                 onClick={() => setCurrentPage('services')}
                 className="px-6 py-3.5 rounded-lg font-display text-sm font-medium bg-bg-surface text-text-primary border border-border-custom hover:border-accent-gold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Inspect Our Services</span>
+                <span>OUR SERVICES</span>
               </button>
             </div>
 
@@ -242,8 +248,8 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             Book a 30-minute Partner-Led Architecture Audit. We will review your data pipelines, database queries, and custom software setups directly.
           </p>
           <button
-            onClick={() => setCurrentPage('contact')}
-            className="px-8 py-4 rounded-lg font-display text-sm font-semibold bg-brand-primary text-text-primary hover:bg-brand-secondary transition-all duration-300 shadow-[0_0_20px_rgba(79,70,229,0.25)] hover:scale-[1.02] cursor-pointer"
+            onClick={() => setIsAuditOpen(true)}
+            className="px-8 py-4 rounded-lg font-display text-sm font-semibold bg-brand-primary text-text-primary hover:bg-brand-secondary transition-all duration-300 shadow-[0_0_20px_rgba(79,70,229,0.25)] hover:scale-[1.02] cursor-pointer animate-pulse-slow"
           >
             Schedule Your Architecture Audit
           </button>

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CardGlass } from '../components/ui/CardGlass';
 import { CheckCircle2, FileText, ArrowUpRight, Shield } from 'lucide-react';
+import { DocViewer } from '../components/ui/DocViewer';
 
 export const Portfolio: React.FC = () => {
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+
   const cases = [
     {
       id: 'driverigt',
@@ -16,7 +20,6 @@ export const Portfolio: React.FC = () => {
         'Created a complete relational database schema for fleets, bookings, and customer profiles.',
         'Constructed comprehensive UI/UX interactive wireframes mapping spatial maps and booking filters.'
       ],
-      driveLink: 'https://docs.google.com/document/d/1O5gE_g4_AFrqI2yD8f6H6f6hE_k_fW6H/edit?usp=sharing', // Premium mock drive link
       tech: ['Next.js', 'React', 'Figma Wireframing', 'MySQL Schema Design', 'PRD Structuring'],
       visualType: 'grid'
     },
@@ -32,7 +35,6 @@ export const Portfolio: React.FC = () => {
         'Designed intuitive Figma wireframes for the Admin Scheduler console and notification delivery matrices.',
         'Structured PRD outlining JSON payload formats, rate-limit thresholds, and MySQL queue schema states.'
       ],
-      driveLink: 'https://docs.google.com/document/d/1B8gD_b5_XFrqI3yD9f7H7f7hE_l_fX7I/edit?usp=sharing',
       tech: ['WhatsApp Business API', 'Python Cron Jobs', 'CRM Webhooks', 'Admin UI Wireframes', 'Database Queue Design'],
       visualType: 'chat'
     },
@@ -48,7 +50,6 @@ export const Portfolio: React.FC = () => {
         'Created high-impact Power BI visuals showcasing evaluation distributions and engagement metrics.',
         'Established sub-second visual query loading speeds for instant performance and milestone auditing.'
       ],
-      driveLink: 'https://docs.google.com/document/d/1C9gE_c6_YFrqI4yD0f8H8f8hE_m_fY8J/edit?usp=sharing',
       tech: ['Power BI', 'MySQL Database', 'Star-Schema Modeling', 'ETL Data Cleaning', 'Excel Consolidation'],
       visualType: 'chart'
     }
@@ -56,6 +57,12 @@ export const Portfolio: React.FC = () => {
 
   return (
     <div className="py-20 max-w-7xl mx-auto px-6">
+      {/* Doc Viewer Workspace overlay */}
+      <DocViewer
+        isOpen={isViewerOpen}
+        onClose={() => setIsViewerOpen(false)}
+        project={selectedProject}
+      />
       {/* 1. Header */}
       <div className="max-w-3xl mb-16 flex flex-col gap-4">
         <span className="font-mono text-xs text-accent-gold uppercase tracking-widest font-semibold font-medium">Enterprise Works</span>
@@ -187,16 +194,17 @@ export const Portfolio: React.FC = () => {
                 <Shield className="w-4 h-4 text-accent-gold" />
                 <span className="font-mono text-[10px] uppercase tracking-wider">Unilateral NDA Secured Access</span>
               </div>
-              <a
-                href={cs.driveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-surface border border-border-custom hover:border-brand-primary text-xs font-mono text-accent-gold hover:text-text-primary transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.4)] group"
+              <button
+                onClick={() => {
+                  setSelectedProject(cs);
+                  setIsViewerOpen(true);
+                }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-surface border border-border-custom hover:border-brand-primary text-xs font-mono text-accent-gold hover:text-text-primary transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.4)] group cursor-pointer"
               >
                 <FileText className="w-4 h-4 text-brand-primary group-hover:text-accent-gold transition-colors" />
                 <span>Access Google Drive Artifacts</span>
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </a>
+              </button>
             </div>
           </CardGlass>
         ))}

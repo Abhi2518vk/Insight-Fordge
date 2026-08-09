@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ABHILASH R',
       role: 'Lead AI & Automation Engineer',
       pedigree: 'AI Architect & Workflow Automation Specialist',
-      desc: 'Expertise in serverless AI agent nodes, complex API integrations, automated OCR/invoice systems, and CRM/ERP webhook integrations.',
+      desc: 'Experienced senior engineer specializing in designing scalable serverless AI workflows, intelligent OCR document processors, complex API integrations, and robust webhooks connecting enterprise CRM/ERP networks. Previously drove process optimization and data intelligence pipelines as a Product Analyst at Amazon.',
       specialty: 'Intelligent Automations',
       avatar: 'AR'
     },
@@ -20,7 +20,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'RAHUL R',
       role: 'Data Scientist',
       pedigree: 'Advanced Statistical Modeling & Analytics Lead',
-      desc: 'Specializes in pandas/NumPy pipelines, forecasting models, retention profiling, customer segmentation, and automated metrics analysis.',
+      desc: 'A dedicated data analyst and mathematical modeling expert who spent years building predictive analytics platforms. Leverages advanced statistical modeling, Pandas/NumPy forecasting, and retention clustering. Formerly held key analytics roles at Elivate Labs, Knovista Technologies, and Labmentix.',
       specialty: 'Predictive & Data Models',
       avatar: 'RR'
     },
@@ -28,7 +28,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ANANDH R',
       role: 'Data Architect',
       pedigree: 'Enterprise Schema & Database Optimization Engineer',
-      desc: 'Architects high-volume star-schemas, dimensional data warehouses, advanced ETL pipelines, and sub-second Power BI/Tableau systems.',
+      desc: 'A structural database engineer who designs massive star-schema layouts and low-latency data warehouses. Highly skilled in building complex ETL transactional loops, database partitioning, and sub-second direct-query rendering on Power BI and Tableau. Developed core analytical structures at Elivate Labs and Knovista Technologies.',
       specialty: 'Schema & BI Engineering',
       avatar: 'AN'
     },
@@ -36,7 +36,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ANANDHU SURESH',
       role: 'Lead Growth & Product Marketing',
       pedigree: 'Product Strategist & Acquisition Architect',
-      desc: 'Orchestrates full-funnel customer analytics strategies, conversion rate optimizations, growth marketing analytics, and data-driven product advisory.',
+      desc: 'An acquisition specialist who maps user journeys, identifies structural market gaps, and leads full-funnel conversion rate optimization (CRO) strategies. Directs comprehensive competitor analysis, customer behavior audits, and product growth advisory to transform analytics insights into real acquisition performance.',
       specialty: 'Data-Driven Acquisition',
       avatar: 'AS'
     }
@@ -58,24 +58,23 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       {/* 2. Partner portraits grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
         {partners.map((partner, idx) => (
-          <CardGlass key={idx} className="flex flex-col gap-6 p-8 items-start justify-between">
+          <CardGlass key={idx} className="flex flex-col gap-6 p-8 items-start justify-between group hover:border-brand-primary/40 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-[0_4px_25px_rgba(79,70,229,0.1)]">
             <div>
               {/* Editorial Circle Placeholder Avatar */}
-              <div className="w-16 h-16 rounded-xl bg-bg-dark border border-border-custom flex items-center justify-center font-mono text-xl text-brand-primary font-bold shadow-inner mb-4">
+              <div className="w-16 h-16 rounded-xl bg-bg-dark border border-border-custom flex items-center justify-center font-mono text-xl text-brand-primary group-hover:text-accent-gold font-bold shadow-inner mb-4 transition-colors duration-300">
                 {partner.avatar}
               </div>
 
               <div className="flex flex-col gap-2">
-                <span className="font-mono text-[10px] text-accent-gold uppercase tracking-wider font-semibold">{partner.pedigree}</span>
-                <h3 className="font-display font-semibold text-lg text-text-primary">{partner.name}</h3>
-                <p className="font-mono text-xs text-brand-secondary">{partner.role}</p>
-                <p className="text-text-secondary text-xs leading-relaxed mt-1">{partner.desc}</p>
+                <h3 className="font-display font-bold text-lg text-text-primary group-hover:text-accent-gold transition-colors duration-300">{partner.name}</h3>
+                <p className="font-mono text-xs text-brand-secondary tracking-wide uppercase font-semibold">{partner.role}</p>
+                <p className="text-text-secondary text-xs sm:text-[13px] leading-relaxed mt-3">{partner.desc}</p>
               </div>
             </div>
 
-            <div className="inline-flex items-center gap-1.5 mt-4 text-[10px] text-text-primary font-mono bg-bg-dark px-2 py-1 rounded border border-border-custom/50 w-fit">
+            <div className="inline-flex items-center gap-1.5 mt-6 text-[10px] text-text-primary font-mono bg-bg-dark px-2.5 py-1.5 rounded border border-border-custom/50 w-fit">
               <Terminal className="w-3.5 h-3.5 text-brand-primary" />
-              <span>SPEC: {partner.specialty}</span>
+              <span>CORE ARCHITECTURE: {partner.specialty}</span>
             </div>
           </CardGlass>
         ))}
