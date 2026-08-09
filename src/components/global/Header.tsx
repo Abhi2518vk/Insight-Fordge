@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Menu, X, Terminal } from 'lucide-react';
+import { Menu, X, Terminal } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: string;
@@ -28,8 +28,12 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
           onClick={() => setCurrentPage('home')}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="relative w-10 h-10 flex items-center justify-center rounded-lg border border-border-custom bg-bg-surface group-hover:border-brand-primary transition-all duration-300">
-            <Shield className="w-5 h-5 text-brand-primary group-hover:text-accent-gold transition-all duration-300" />
+          <div className="relative h-11 flex items-center justify-center rounded-lg border border-border-custom bg-bg-surface p-1 group-hover:border-brand-primary transition-all duration-300 overflow-hidden">
+            <img
+              src="/logo.png"
+              alt="Insight Forge Logo"
+              className="h-full w-auto object-contain transition-all duration-300 group-hover:brightness-110"
+            />
             <div className="absolute -inset-0.5 bg-brand-primary/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10" />
           </div>
           <div className="flex flex-col">
