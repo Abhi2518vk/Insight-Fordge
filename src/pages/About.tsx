@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ABHILASH R',
       role: 'Lead AI & Automation Engineer',
       pedigree: 'AI Architect & Workflow Automation Specialist',
-      desc: 'Experienced senior engineer specializing in designing scalable serverless AI workflows, intelligent OCR document processors, complex API integrations, and robust webhooks connecting enterprise CRM/ERP networks. Previously drove process optimization and data intelligence pipelines as a Product Analyst at Amazon.',
+      desc: 'Currently working as a Product Analyst at Amazon. Experienced senior engineer specializing in designing scalable serverless AI workflows, intelligent OCR document processors, complex API integrations, and robust webhooks connecting enterprise CRM/ERP networks.',
       specialty: 'Intelligent Automations',
       avatar: 'AR'
     },
@@ -20,15 +20,15 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'RAHUL R',
       role: 'Data Scientist',
       pedigree: 'Advanced Statistical Modeling & Analytics Lead',
-      desc: 'A dedicated data analyst and mathematical modeling expert who spent years building predictive analytics platforms. Leverages advanced statistical modeling, Pandas/NumPy forecasting, and retention clustering. Formerly held key analytics roles at Elivate Labs, Knovista Technologies, and Labmentix.',
+      desc: 'Currently working as a Senior Data Scientist. A dedicated data analyst and mathematical modeling expert who spent years building predictive analytics platforms. Leverages advanced statistical modeling, Pandas/NumPy forecasting, and retention clustering.',
       specialty: 'Predictive & Data Models',
       avatar: 'RR'
     },
     {
-      name: 'ANANDH R',
-      role: 'Data Architect',
+      name: 'ANAND R',
+      role: 'Data Engineer',
       pedigree: 'Enterprise Schema & Database Optimization Engineer',
-      desc: 'A structural database engineer who designs massive star-schema layouts and low-latency data warehouses. Highly skilled in building complex ETL transactional loops, database partitioning, and sub-second direct-query rendering on Power BI and Tableau. Developed core analytical structures at Elivate Labs and Knovista Technologies.',
+      desc: 'Currently working as a Senior Data Engineer. A structural database engineer who designs massive star-schema layouts and low-latency data warehouses. Highly skilled in building complex ETL transactional loops, database partitioning, and sub-second direct-query rendering.',
       specialty: 'Schema & BI Engineering',
       avatar: 'AN'
     },
@@ -36,7 +36,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ANANDHU SURESH',
       role: 'Lead Growth & Product Marketing',
       pedigree: 'Product Strategist & Acquisition Architect',
-      desc: 'An acquisition specialist who maps user journeys, identifies structural market gaps, and leads full-funnel conversion rate optimization (CRO) strategies. Directs comprehensive competitor analysis, customer behavior audits, and product growth advisory to transform analytics insights into real acquisition performance.',
+      desc: 'Currently working as a Senior Growth & Product Marketing Lead. An acquisition specialist who maps user journeys, identifies structural market gaps, and leads full-funnel conversion rate optimization (CRO) strategies.',
       specialty: 'Data-Driven Acquisition',
       avatar: 'AS'
     }

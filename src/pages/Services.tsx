@@ -10,7 +10,7 @@ export const Services: React.FC = () => {
     {
       id: 'bi',
       title: 'Business Intelligence & Data Analytics',
-      icon: <Layers className="w-6 h-6 text-brand-primary" />,
+      icon: <Layers className="w-10 h-10 text-brand-primary" />,
       tag: 'DATA ARCHITECTURE & SCHEMAS',
       desc: 'We engineer ultra-secure transactional ETL pipelines, high-performance dimensional data warehouses, and custom schema relational layouts (PostgreSQL, Snowflake, MySQL) designed to serve real-time executive dashboard visualizations with zero aggregation delay.',
       details: [
@@ -24,7 +24,7 @@ export const Services: React.FC = () => {
     {
       id: 'dev',
       title: 'Software & Digital Product Engineering',
-      icon: <Terminal className="w-6 h-6 text-brand-secondary" />,
+      icon: <Terminal className="w-10 h-10 text-brand-secondary" />,
       tag: 'FLAGSHIP DIGITAL ENGINEERING',
       desc: 'Our premier engineering division. We architect and code clean, type-safe custom web portals, enterprise-grade admin interfaces, and performance-optimized SaaS applications leveraging Next.js, React, and robust containerized microservice layouts.',
       details: [
@@ -38,7 +38,7 @@ export const Services: React.FC = () => {
     {
       id: 'ai',
       title: 'AI & Business Automation',
-      icon: <Zap className="w-6 h-6 text-accent-gold" />,
+      icon: <Zap className="w-10 h-10 text-accent-gold" />,
       tag: 'PROCESS AUTOMATION & INTEGRATION',
       desc: 'We bypass manual data validation overhead entirely. By integrating CRM, ERP, and localized system metrics with scheduled serverless Python loops and webhooks, we keep operations executing smoothly and automatically 24/7.',
       details: [
@@ -66,26 +66,26 @@ export const Services: React.FC = () => {
       </div>
 
       {/* 2. Interactive selector tabs */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {pillars.map((p) => (
           <button
             key={p.id}
             onClick={() => setActivePillar(p.id as any)}
-            className={`p-8 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col gap-4 transform hover:scale-[1.02] relative overflow-hidden ${
+            className={`p-10 md:p-12 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col gap-6 transform hover:scale-[1.02] relative overflow-hidden ${
               activePillar === p.id
-                ? 'bg-bg-surface border-brand-primary text-text-primary shadow-[0_4px_30px_rgba(79,70,229,0.25)] ring-1 ring-brand-primary/30'
+                ? 'bg-bg-surface border-brand-primary text-text-primary shadow-[0_6px_35px_rgba(79,70,229,0.3)] ring-1 ring-brand-primary/30'
                 : 'bg-bg-surface/30 border-border-custom text-text-secondary hover:text-text-primary hover:bg-bg-surface/80 hover:border-border-custom/80'
             }`}
           >
             {activePillar === p.id && (
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-36 h-36 bg-brand-primary/5 rounded-full blur-2xl pointer-events-none" />
             )}
-            <div className={`p-3 rounded-xl border w-fit ${activePillar === p.id ? 'border-brand-primary/50 text-accent-gold bg-bg-dark/80' : 'border-border-custom text-text-secondary bg-bg-dark/30'}`}>
+            <div className={`p-4 rounded-xl border w-fit ${activePillar === p.id ? 'border-brand-primary/50 text-accent-gold bg-bg-dark/80' : 'border-border-custom text-text-secondary bg-bg-dark/30'}`}>
               {p.icon}
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-mono text-[9px] uppercase tracking-widest text-accent-gold font-bold block">{p.tag}</span>
-              <h3 className="font-display font-bold text-base sm:text-lg tracking-tight mt-1">{p.title}</h3>
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-accent-gold font-bold block">{p.tag}</span>
+              <h3 className="font-display font-bold text-lg sm:text-xl lg:text-2xl tracking-tight mt-1 leading-snug">{p.title}</h3>
             </div>
           </button>
         ))}
