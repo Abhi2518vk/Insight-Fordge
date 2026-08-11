@@ -65,7 +65,7 @@ Email: ${formData.email || 'N/A'}
 Pillars: ${selectedPillars.join(', ') || 'None selected'}
 Bottleneck: ${formData.bottleneck || 'N/A'}`;
 
-    return `https://wa.me/917594835882?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/918891525552?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -90,28 +90,28 @@ Bottleneck: ${formData.bottleneck || 'N/A'}`;
           </div>
 
           <div className="flex flex-col gap-4">
-            <a href="mailto:insightforge.site@gmail.com" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
+            <a href="mailto:site.insightforge@gmail.com" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
               <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Email</span>
-                <span className="text-sm font-semibold text-text-primary">insightforge.site@gmail.com</span>
+                <span className="text-sm font-semibold text-text-primary">site.insightforge@gmail.com</span>
               </div>
             </a>
 
-            <a href="tel:+917594835882" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
+            <a href="tel:+918891525552" className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group">
               <div className="p-3 rounded-lg bg-bg-dark border border-border-custom text-brand-primary group-hover:text-accent-gold transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest">Secure Partner Line</span>
-                <span className="text-sm font-semibold text-text-primary">+91 7594 835 882</span>
+                <span className="text-sm font-semibold text-text-primary">+91 8891 525 552</span>
               </div>
             </a>
 
             <a
-              href="https://wa.me/917594835882?text=Hello%20Insight%20Forge%2C%20I%20would%20like%20to%20schedule%20a%20product%2Farchitecture%20audit."
+              href="https://wa.me/918891525552?text=Hello%20Insight%20Forge%2C%20I%20would%20like%20to%20schedule%20a%20product%2Farchitecture%20audit."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 rounded-xl border border-border-custom bg-bg-surface/50 hover:border-brand-primary transition-colors cursor-pointer group"
@@ -123,7 +123,7 @@ Bottleneck: ${formData.bottleneck || 'N/A'}`;
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest font-semibold text-brand-primary">Direct WhatsApp Secure</span>
-                <span className="text-sm font-semibold text-text-primary">+91 7594 835 882</span>
+                <span className="text-sm font-semibold text-text-primary">+91 8891 525 552</span>
               </div>
             </a>
           </div>

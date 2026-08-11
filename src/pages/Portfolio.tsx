@@ -11,7 +11,7 @@ export const Portfolio: React.FC = () => {
     {
       id: 'driverigt',
       title: 'DriveRigt: Frictionless Car Rental Product Design & Analytics Engine',
-      client: 'Digital Product Concept & Architecture',
+      client: 'Product Development & Design',
       stat: 'User Drop-off Reduced by 45%',
       situation: 'Traditional car rental platforms experience massive drop-off rates exceeding 60% during checkout due to slow database queries, complex vehicle filtering, and obscure insurance configuration screens.',
       transformation: 'Engineered a high-fidelity product prototype utilizing Next.js, React, and Figma wireframing. Authored a thorough Product Requirement Document (PRD) detailing vehicle database schemas, real-time availability APIs, and secure payment flows, and paired it with a simulated analytics dashboard tracing user conversion funnels.',
@@ -21,12 +21,14 @@ export const Portfolio: React.FC = () => {
         'Constructed comprehensive UI/UX interactive wireframes mapping spatial maps and booking filters.'
       ],
       tech: ['Next.js', 'React', 'Figma Wireframing', 'MySQL Schema Design', 'PRD Structuring'],
-      visualType: 'grid'
+      visualType: 'grid',
+      externalLink: 'https://lnkd.in/gsGP8muU',
+      linkLabel: 'Explore Prototype on LinkedIn'
     },
     {
       id: 'whatsapp-scheduler',
       title: 'WhatsApp Custom Scheduler & Enterprise Product Teardown',
-      client: 'Messaging Optimization & Automation Blueprint',
+      client: 'Product Development & Architecture',
       stat: '100% Automated Delivery Flow',
       situation: 'E-commerce and SaaS platforms suffer high operational overhead when manually scheduling and delivering targeted notifications, lacking scheduled CRM automation, webhook failure handling, and custom user delivery windows.',
       transformation: 'Conducted an exhaustive product teardown of WhatsApp messaging mechanics. Designed and engineered an automated scheduling middleware blueprint using the WhatsApp Business API, scheduled serverless Python Cron triggers, and a comprehensive PRD specifying retry backoffs, API rate-limits, and delivery status webhooks.',
@@ -36,7 +38,9 @@ export const Portfolio: React.FC = () => {
         'Structured PRD outlining JSON payload formats, rate-limit thresholds, and MySQL queue schema states.'
       ],
       tech: ['WhatsApp Business API', 'Python Cron Jobs', 'CRM Webhooks', 'Admin UI Wireframes', 'Database Queue Design'],
-      visualType: 'chat'
+      visualType: 'chat',
+      externalLink: 'https://lnkd.in/gSr6ryqe',
+      linkLabel: 'Access PRD on LinkedIn'
     },
     {
       id: 'cohort-analytics',
@@ -51,7 +55,9 @@ export const Portfolio: React.FC = () => {
         'Established sub-second visual query loading speeds for instant performance and milestone auditing.'
       ],
       tech: ['Power BI', 'MySQL Database', 'Star-Schema Modeling', 'ETL Data Cleaning', 'Excel Consolidation'],
-      visualType: 'chart'
+      visualType: 'chart',
+      externalLink: 'https://linkedin.com',
+      linkLabel: 'View Project on LinkedIn'
     }
   ];
 
@@ -70,7 +76,7 @@ export const Portfolio: React.FC = () => {
           Our Client Solutions & Case Study Blueprints
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          Audit our elite-tier project architectures following the strict STAR method (Situation, Task, Action, Result). Access raw project materials, document specs, and Google Drive delivery archives.
+          Audit our elite-tier project architectures following the strict STAR method (Situation, Task, Action, Result). Access raw project materials, document specs, and verified development archives.
         </p>
       </div>
 
@@ -202,7 +208,7 @@ export const Portfolio: React.FC = () => {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-surface border border-border-custom hover:border-brand-primary text-xs font-mono text-accent-gold hover:text-text-primary transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.4)] group cursor-pointer"
               >
                 <FileText className="w-4 h-4 text-brand-primary group-hover:text-accent-gold transition-colors" />
-                <span>Access Google Drive Artifacts</span>
+                <span>Interactive Workspace Specs</span>
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
               </button>
             </div>

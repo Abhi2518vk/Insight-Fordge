@@ -11,6 +11,8 @@ interface DocViewerProps {
     situation: string;
     transformation: string;
     tech: string[];
+    externalLink?: string;
+    linkLabel?: string;
   } | null;
 }
 
@@ -53,13 +55,13 @@ export const DocViewer: React.FC<DocViewerProps> = ({ isOpen, onClose, project }
               <h3 className="font-display font-bold text-xl sm:text-2xl text-text-primary leading-tight">{project.title}</h3>
             </div>
             <a
-              href={`https://docs.google.com/document/d/1O5gE_g4_AFrqI2yD8f6H6f6hE_k_fW6H/edit`}
+              href={project.externalLink || "https://linkedin.com"}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-brand-primary/10 hover:bg-brand-primary/20 border border-brand-primary/40 hover:border-brand-primary text-xs font-mono text-text-primary flex items-center gap-1.5 self-stretch sm:self-auto text-center justify-center transition-all cursor-pointer"
             >
               <Download className="w-4 h-4 text-accent-gold" />
-              <span>Open in Google Drive</span>
+              <span>{project.linkLabel || "Explore on LinkedIn"}</span>
             </a>
           </div>
 
