@@ -1,10 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { CardGlass } from '../components/ui/CardGlass';
 import { BadgeTech } from '../components/ui/BadgeTech';
 import { CheckCircle2, Terminal, Zap, Layers } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const [activePillar, setActivePillar] = useState<'bi' | 'dev' | 'ai'>('bi');
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  const handlePillarClick = (pillarId: 'bi' | 'dev' | 'ai') => {
+    setActivePillar(pillarId);
+
+    // Smooth scroll immediately after state is set to bring the expanded content into view.
+    setTimeout(() => {
+      if (tabsRef.current && panelRef.current) {
+        const isMobile = window.innerWidth < 768;
+        let targetY = 0;
+
+        if (isMobile) {
+          // On mobile, scroll so that the deep-dive panel is brought into view,
+          // but with a 180px offset to keep the selector tabs partially visible at the top.
+          const panelPosition = panelRef.current.getBoundingClientRect().top;
+          targetY = panelPosition + window.scrollY - 180;
+        } else {
+          // On desktop, scroll to the tabs container so both tabs and the panel are perfectly positioned.
+          const tabsPosition = tabsRef.current.getBoundingClientRect().top;
+          targetY = tabsPosition + window.scrollY - 96; // 80px header + 16px buffer
+        }
+
+        window.scrollTo({
+          top: targetY,
+          behavior: 'smooth'
+        });
+      }
+    }, 50);
+  };
 
   const pillars = [
     {
@@ -66,11 +96,11 @@ export const Services: React.FC = () => {
       </div>
 
       {/* 2. Interactive selector tabs */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div ref={tabsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {pillars.map((p) => (
           <button
             key={p.id}
-            onClick={() => setActivePillar(p.id as 'bi' | 'dev' | 'ai')}
+            onClick={() => handlePillarClick(p.id as 'bi' | 'dev' | 'ai')}
             className={`p-10 md:p-12 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col gap-6 transform hover:scale-[1.02] relative overflow-hidden ${
               activePillar === p.id
                 ? 'bg-bg-surface border-brand-primary text-text-primary shadow-[0_6px_35px_rgba(79,70,229,0.3)] ring-1 ring-brand-primary/30'
@@ -92,60 +122,62 @@ export const Services: React.FC = () => {
       </div>
 
       {/* 3. Selected capability deep dive panel */}
-      <CardGlass className="p-8 sm:p-14 border-brand-primary/30 animate-forge shadow-[0_10px_40px_rgba(0,0,0,0.6)] relative overflow-hidden">
-        <div className="absolute -top-32 -left-32 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div ref={panelRef}>
+        <CardGlass className="p-8 sm:p-14 border-brand-primary/30 animate-forge shadow-[0_10px_40px_rgba(0,0,0,0.6)] relative overflow-hidden">
+          <div className="absolute -top-32 -left-32 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative z-10">
-          {/* Panel Left - Summary & tech stack */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="flex flex-col gap-3">
-              <span className="font-mono text-xs text-accent-gold uppercase tracking-widest font-bold">Selected Capability</span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight leading-tight">{currentPillar.title}</h2>
-            </div>
-            <p className="text-text-secondary text-sm sm:text-base leading-relaxed">{currentPillar.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative z-10">
+            {/* Panel Left - Summary & tech stack */}
+            <div className="lg:col-span-5 flex flex-col gap-8">
+              <div className="flex flex-col gap-3">
+                <span className="font-mono text-xs text-accent-gold uppercase tracking-widest font-bold">Selected Capability</span>
+                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight leading-tight">{currentPillar.title}</h2>
+              </div>
+              <p className="text-text-secondary text-sm sm:text-base leading-relaxed">{currentPillar.desc}</p>
 
-            <div className="pt-8 border-t border-border-custom/50">
-              <span className="font-mono text-[10px] text-text-secondary uppercase tracking-widest block mb-4 font-bold">Technologies We Deploy:</span>
-              <div className="flex flex-wrap gap-2.5">
-                {currentPillar.stack.map((tech, idx) => (
-                  <BadgeTech key={idx}>{tech}</BadgeTech>
-                ))}
+              <div className="pt-8 border-t border-border-custom/50">
+                <span className="font-mono text-[10px] text-text-secondary uppercase tracking-widest block mb-4 font-bold">Technologies We Deploy:</span>
+                <div className="flex flex-wrap gap-2.5">
+                  {currentPillar.stack.map((tech, idx) => (
+                    <BadgeTech key={idx}>{tech}</BadgeTech>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Panel Right - Deliverables Checklist */}
-          <div className="lg:col-span-7 bg-bg-dark/80 border border-border-custom/80 rounded-2xl p-8 sm:p-10 shadow-2xl">
-            <h4 className="font-display font-bold text-sm text-text-primary uppercase tracking-wider mb-8 pb-3 border-b border-border-custom/50 flex items-center gap-2">
-              <Terminal className="w-4 h-4 text-brand-primary" />
-              <span>Core Architectural Milestones</span>
-            </h4>
-            <ul className="flex flex-col gap-6">
-              {currentPillar.details.map((item, idx) => {
-                const parts = item.split(': ');
-                const title = parts[0];
-                const bullets = parts[1] ? parts[1].split(', ') : [];
-                return (
-                  <li key={idx} className="flex items-start gap-4 border-b border-border-custom/10 pb-5 last:border-b-0 last:pb-0">
-                    <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
-                    <div className="flex flex-col gap-2">
-                      <span className="text-text-primary text-base font-bold tracking-wide">{title}</span>
-                      {bullets.length > 0 && (
-                        <ul className="list-disc pl-5 text-xs sm:text-sm text-text-secondary flex flex-col gap-1.5 mt-1">
-                          {bullets.map((bullet, bidx) => (
-                            <li key={bidx} className="hover:text-text-primary transition-colors leading-relaxed">{bullet}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            {/* Panel Right - Deliverables Checklist */}
+            <div className="lg:col-span-7 bg-bg-dark/80 border border-border-custom/80 rounded-2xl p-8 sm:p-10 shadow-2xl">
+              <h4 className="font-display font-bold text-sm text-text-primary uppercase tracking-wider mb-8 pb-3 border-b border-border-custom/50 flex items-center gap-2">
+                <Terminal className="w-4 h-4 text-brand-primary" />
+                <span>Core Architectural Milestones</span>
+              </h4>
+              <ul className="flex flex-col gap-6">
+                {currentPillar.details.map((item, idx) => {
+                  const parts = item.split(': ');
+                  const title = parts[0];
+                  const bullets = parts[1] ? parts[1].split(', ') : [];
+                  return (
+                    <li key={idx} className="flex items-start gap-4 border-b border-border-custom/10 pb-5 last:border-b-0 last:pb-0">
+                      <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex flex-col gap-2">
+                        <span className="text-text-primary text-base font-bold tracking-wide">{title}</span>
+                        {bullets.length > 0 && (
+                          <ul className="list-disc pl-5 text-xs sm:text-sm text-text-secondary flex flex-col gap-1.5 mt-1">
+                            {bullets.map((bullet, bidx) => (
+                              <li key={bidx} className="hover:text-text-primary transition-colors leading-relaxed">{bullet}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-        </div>
-      </CardGlass>
+        </CardGlass>
+      </div>
     </div>
   );
 };
