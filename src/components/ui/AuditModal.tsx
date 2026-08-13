@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Calendar, Clock, Shield, Terminal, ArrowRight, MessageSquare, Check } from 'lucide-react';
 
 interface AuditModalProps {
@@ -7,6 +7,16 @@ interface AuditModalProps {
 }
 
 export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [isOpen]);
+
   const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -37,7 +47,31 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
   const [selectedTime, setSelectedTime] = useState<string>('2:00 PM');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
-  const timeSlots = ['10:00 AM', '11:30 AM', '2:00 PM', '3:30 PM', '5:00 PM'];
+  // Generate dynamic, flexible time slots from 8:00 AM to 10:00 PM in 1.5-hour intervals
+  const generateTimeSlots = (): string[] => {
+    const slots: string[] = [];
+    let startHour = 8; // 8:00 AM
+    let startMinute = 0;
+    const endHour = 22; // 10:00 PM
+
+    while (startHour < endHour || (startHour === endHour && startMinute === 0)) {
+      const period = startHour >= 12 ? 'PM' : 'AM';
+      const displayHour = startHour > 12 ? startHour - 12 : startHour;
+      const displayMinuteStr = startMinute === 0 ? '00' : '30';
+      slots.push(`${displayHour}:${displayMinuteStr} ${period}`);
+
+      startMinute += 30;
+      if (startMinute >= 60) {
+        startHour += 1;
+        startMinute -= 60;
+      }
+      // Add 1 hour to complete the 1.5-hour interval step (total 90 minutes)
+      startHour += 1;
+    }
+    return slots;
+  };
+
+  const timeSlots = generateTimeSlots();
 
   if (!isOpen) return null;
 

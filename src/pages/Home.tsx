@@ -31,7 +31,9 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-text-primary leading-[1.1]">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Insight Forge.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">
+                Data Analytics, Software Development, and Business Intelligence Solutions.
+              </span>
             </h1>
 
             <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">

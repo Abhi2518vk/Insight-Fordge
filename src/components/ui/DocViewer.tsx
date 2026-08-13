@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, FileText, Download, Shield, Terminal, BookOpen, Database, Zap } from 'lucide-react';
 
 interface DocViewerProps {
@@ -17,6 +17,16 @@ interface DocViewerProps {
 }
 
 export const DocViewer: React.FC<DocViewerProps> = ({ isOpen, onClose, project }) => {
+  useEffect(() => {
+    if (isOpen && project) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [isOpen, project]);
+
   if (!isOpen || !project) return null;
 
   return (
