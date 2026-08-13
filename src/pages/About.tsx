@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ABHILASH R',
       role: 'Lead AI & Automation Engineer',
       pedigree: 'AI Architect & Workflow Automation Specialist',
-      desc: 'Product Analyst at Amazon. Experienced engineer specializing in designing scalable serverless AI workflows, intelligent OCR document processors, complex API integrations, and robust webhooks connecting enterprise CRM/ERP networks.',
+      desc: 'Product Analyst at Amazon. Began his career engineering high-fidelity, feature-rich web platforms from scratch, later designing and shipping custom applications for small-scale business use cases and clients. Building on this solid full-stack engineering foundation, he transitioned into orchestrating complex workflow automations to replace manual operational tasks—architecting high-performance serverless AI logic, intelligent OCR document processors, API integrations, and resilient webhooks for enterprise CRM/ERP environments.',
       specialty: 'Intelligent Automations',
       avatar: 'AR'
     },

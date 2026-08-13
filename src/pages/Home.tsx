@@ -31,11 +31,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-text-primary leading-[1.1]">
-              Data Analytics and <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Business Intelligence</span> Solutions.
+              We Build Web & Software, Automate Systems, and Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Data Intelligence</span>.
             </h1>
 
             <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
-              We design and engineer enterprise-grade business intelligence dashboards, data-driven custom software, and automated workflows to solve your organization's core operational bottlenecks.
+              From premium web applications and robust custom software to intelligent workflow automations and high-density analytics, we engineer high-performance systems for your core operational bottlenecks.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
@@ -44,7 +44,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
                 className="px-6 py-3.5 rounded-lg font-display text-sm font-medium bg-brand-primary text-text-primary hover:bg-brand-secondary transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_15px_rgba(79,70,229,0.25)] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Terminal className="w-4 h-4" />
-                <span>Schedule a Data & Software Audit</span>
+                <span>Schedule a Tech & Systems Audit</span>
               </button>
               <button
                 onClick={() => setCurrentPage('services')}
@@ -56,7 +56,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
 
             {/* High-fidelity Integration Matrix block to balance the height */}
             <div className="w-full mt-6 pt-6 border-t border-border-custom/50">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-text-secondary block mb-3">Enterprise Data Ecosystem Integration</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-text-secondary block mb-3">Enterprise Software & Data Ecosystem Integration</span>
               <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                 <div className="bg-bg-surface/50 border border-border-custom/60 rounded px-3 py-2 text-center flex flex-col items-center justify-center">
                   <Database className="w-4 h-4 text-brand-primary mb-1" />
@@ -143,28 +143,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
           <CardGlass className="flex flex-col justify-between h-full group">
             <div>
               <div className="w-12 h-12 rounded-lg bg-bg-dark border border-border-custom flex items-center justify-center mb-6 group-hover:border-brand-primary transition-colors duration-300">
-                <Layers className="w-5 h-5 text-brand-primary" />
+                <Terminal className="w-5 h-5 text-brand-primary" />
               </div>
-              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Business Intelligence & Data Analytics</h3>
+              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Web, Software & Product Engineering</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                We engineer complete database schemas and transactional ETL pipelines, serving real-time direct-query Power BI & Tableau dashboards with sub-second latency.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <BadgeTech>Power BI</BadgeTech>
-              <BadgeTech>Snowflake</BadgeTech>
-              <BadgeTech>SQL Tuning</BadgeTech>
-            </div>
-          </CardGlass>
-
-          <CardGlass className="flex flex-col justify-between h-full group">
-            <div>
-              <div className="w-12 h-12 rounded-lg bg-bg-dark border border-border-custom flex items-center justify-center mb-6 group-hover:border-brand-primary transition-colors duration-300">
-                <Terminal className="w-5 h-5 text-green-500" />
-              </div>
-              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Software & Product Engineering</h3>
-              <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                Our flagship capability. We write type-safe React, Next.js, and TypeScript code, deploying scalable, data-driven containerized platforms to AWS, Docker, and edge runtimes.
+                We design and build bespoke high-fidelity web platforms, corporate websites, SaaS applications, and robust custom software. Our principal leads write type-safe React, Next.js, and TypeScript code to deploy scalable, cloud-native solutions.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -179,15 +162,32 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               <div className="w-12 h-12 rounded-lg bg-bg-dark border border-border-custom flex items-center justify-center mb-6 group-hover:border-brand-primary transition-colors duration-300">
                 <Zap className="w-5 h-5 text-accent-gold" />
               </div>
-              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">AI & Business Automation</h3>
+              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">AI Automation & Tech Consulting</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                Replace manual processes with fully-automated Cron data validation pipelines and secure, rate-limited API handlers that keep your operations running 24/7.
+                Replace manual, repetitive business workflows with custom serverless AI integrations, rate-limited API webhooks, and secure CRM-ERP synchronizations that execute flawlessly 24/7.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
               <BadgeTech>Python</BadgeTech>
               <BadgeTech>API Handlers</BadgeTech>
-              <BadgeTech>Semantic Search</BadgeTech>
+              <BadgeTech>Workflow Webhooks</BadgeTech>
+            </div>
+          </CardGlass>
+
+          <CardGlass className="flex flex-col justify-between h-full group">
+            <div>
+              <div className="w-12 h-12 rounded-lg bg-bg-dark border border-border-custom flex items-center justify-center mb-6 group-hover:border-brand-primary transition-colors duration-300">
+                <Layers className="w-5 h-5 text-green-500" />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Data Analytics & BI</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-6">
+                We engineer optimized relational database schemas and transactional ETL/data pipelines, delivering sub-second direct-query rendering inside premium Power BI, Tableau, and custom web dashboards.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <BadgeTech>Power BI</BadgeTech>
+              <BadgeTech>Snowflake</BadgeTech>
+              <BadgeTech>SQL Tuning</BadgeTech>
             </div>
           </CardGlass>
         </div>
@@ -245,7 +245,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             Ready to solve your organization's technical bottleneck?
           </h2>
           <p className="text-text-secondary text-sm sm:text-base leading-relaxed max-w-xl">
-            Book a 30-minute Partner-Led Architecture Audit. We will review your data pipelines, database queries, and custom software setups directly.
+            Book a 30-minute Partner-Led Architecture Audit. We will review your web platforms, custom software setups, automated workflows, and data pipelines directly.
           </p>
           <button
             onClick={() => setIsAuditOpen(true)}

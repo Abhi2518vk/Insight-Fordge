@@ -30,10 +30,10 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <div className="flex flex-col gap-4">
             <h4 className="font-display font-medium text-text-primary text-sm tracking-wider uppercase">Capabilities</h4>
             <div className="flex flex-col gap-2">
-              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Business Intelligence</button>
+              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Web & Software Engineering</button>
               <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">AI Workflow Automation</button>
-              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Product Engineering</button>
-              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Product Strategy</button>
+              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Business Intelligence</button>
+              <button onClick={() => setCurrentPage('services')} className="text-left text-text-secondary hover:text-accent-gold text-sm transition-colors cursor-pointer">Technology & Product Strategy</button>
             </div>
           </div>
 
