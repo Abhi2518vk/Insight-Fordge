@@ -70,7 +70,7 @@ export const Services: React.FC = () => {
         {pillars.map((p) => (
           <button
             key={p.id}
-            onClick={() => setActivePillar(p.id as any)}
+            onClick={() => setActivePillar(p.id as 'bi' | 'dev' | 'ai')}
             className={`p-10 md:p-12 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col gap-6 transform hover:scale-[1.02] relative overflow-hidden ${
               activePillar === p.id
                 ? 'bg-bg-surface border-brand-primary text-text-primary shadow-[0_6px_35px_rgba(79,70,229,0.3)] ring-1 ring-brand-primary/30'

@@ -31,11 +31,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-text-primary leading-[1.1]">
-              We Build Web & Software, Automate Systems, and Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Data Intelligence</span>.
+              Data Analytics, <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Software Development</span>, and Business Intelligence Solutions.
             </h1>
 
             <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
-              From premium web applications and robust custom software to intelligent workflow automations and high-density analytics, we engineer high-performance systems for your core operational bottlenecks.
+              We design and build end-to-end data analysis platforms, interactive data dashboards, custom web development, web design, and software design. We engineer high-performance software systems for your core operational bottlenecks.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">

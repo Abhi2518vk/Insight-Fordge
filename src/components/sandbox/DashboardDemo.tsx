@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Server, Cpu, RefreshCw } from 'lucide-react';
 
 export const DashboardDemo: React.FC = () => {
@@ -6,15 +6,10 @@ export const DashboardDemo: React.FC = () => {
   const [dataPoints, setDataPoints] = useState<number[]>([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  // Pre-populate data points
-  useEffect(() => {
-    generateData();
-  }, [selectedMetric]);
-
-  const generateData = () => {
+  const generateData = useCallback(() => {
     setIsRefreshing(true);
     setTimeout(() => {
-      let points: number[] = [];
+      const points: number[] = [];
       const base = selectedMetric === 'latency' ? 35 : selectedMetric === 'query' ? 120 : 60;
       const variance = selectedMetric === 'latency' ? 10 : selectedMetric === 'query' ? 30 : 15;
 
@@ -24,7 +19,12 @@ export const DashboardDemo: React.FC = () => {
       setDataPoints(points);
       setIsRefreshing(false);
     }, 400);
-  };
+  }, [selectedMetric]);
+
+  // Pre-populate data points
+  useEffect(() => {
+    generateData();
+  }, [generateData]);
 
   const getMetricDetails = () => {
     switch (selectedMetric) {

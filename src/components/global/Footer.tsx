@@ -52,13 +52,13 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <div className="flex flex-col gap-4">
             <h4 className="font-display font-medium text-text-primary text-sm tracking-wider uppercase">Secure Channels</h4>
             <div className="flex flex-col gap-3">
-              <a href="mailto:site.insightforge@gmail.com" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
+              <a href="mailto:insightforge.site@gmail.com" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
                 <Mail className="w-4 h-4 text-brand-primary" />
-                <span>site.insightforge@gmail.com</span>
+                <span>insightforge.site@gmail.com</span>
               </a>
-              <a href="tel:+918891525552" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
+              <a href="tel:+917594835882" className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm">
                 <Phone className="w-4 h-4 text-brand-primary" />
-                <span>+91 8891 525 552</span>
+                <span>+91 7594 835 882</span>
               </a>
               <div className="flex items-center gap-3 text-text-secondary text-sm">
                 <MessageSquare className="w-4 h-4 text-brand-primary" />

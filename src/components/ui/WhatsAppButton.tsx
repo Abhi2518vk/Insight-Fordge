@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '918891525552';
+  const phoneNumber = '917594835882';
   const defaultMessage = encodeURIComponent('Hello Insight Forge, I would like to schedule a product/architecture audit.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 

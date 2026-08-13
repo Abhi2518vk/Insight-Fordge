@@ -3,11 +3,25 @@ import { CardGlass } from '../components/ui/CardGlass';
 import { CheckCircle2, FileText, ArrowUpRight, Shield } from 'lucide-react';
 import { DocViewer } from '../components/ui/DocViewer';
 
+interface ProjectCase {
+  id: string;
+  title: string;
+  client: string;
+  stat: string;
+  situation: string;
+  transformation: string;
+  results: string[];
+  tech: string[];
+  visualType: string;
+  externalLink: string;
+  linkLabel: string;
+}
+
 export const Portfolio: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectCase | null>(null);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
-  const cases = [
+  const cases: ProjectCase[] = [
     {
       id: 'driverigt',
       title: 'DriveRigt: Frictionless Car Rental Product Design & Analytics Engine',
