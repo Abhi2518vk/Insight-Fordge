@@ -31,11 +31,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-text-primary leading-[1.1]">
-              Data Analytics, <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Software Development</span>, and Business Intelligence Solutions.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-accent-gold">Insight Forge.</span>
             </h1>
 
             <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
-              We design and build end-to-end data analysis platforms, interactive data dashboards, custom web development, web design, and software design. We engineer high-performance software systems for your core operational bottlenecks.
+              We design and build end-to-end data analysis dashboards, custom web development, web design, and software building, with end-to-end automations. We engineer high-performance software systems for your core operational bottlenecks.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">

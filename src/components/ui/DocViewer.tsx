@@ -67,6 +67,77 @@ export const DocViewer: React.FC<DocViewerProps> = ({ isOpen, onClose, project }
 
           {/* Interactive Document Body Sheet */}
           <div className="bg-bg-dark border border-border-custom/60 rounded-2xl p-6 sm:p-8 font-mono text-[11px] sm:text-xs text-text-secondary leading-relaxed shadow-inner max-h-[50vh] overflow-y-auto">
+            {project.id === 'picko' && (
+              <div className="flex flex-col gap-6 font-display">
+                <div className="border-b border-border-custom/30 pb-4">
+                  <h1 className="text-lg font-bold text-text-primary uppercase tracking-wider font-mono mb-2">[SPEC] Picko Logistics Booking & Dispatch Engine</h1>
+                  <span className="text-[10px] text-accent-gold font-mono uppercase tracking-widest">[Status: Deployed & Active | Version: 1.0.0]</span>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-sm font-bold text-text-primary tracking-wide flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-brand-primary" />
+                    1. System Architecture & Dispatch Flows
+                  </h2>
+                  <p className="pl-6 font-sans text-xs text-text-secondary">
+                    Picko delivers a comprehensive multi-point delivery booking ecosystem. It facilitates live package scheduling, automated assignment of courier agents based on optimal geo-locations, and a unified customer dashboard tracking current progress.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-2 mt-4">
+                  <h2 className="text-sm font-bold text-text-primary tracking-wide flex items-center gap-2 font-mono">
+                    <Database className="w-4 h-4 text-brand-secondary" />
+                    2. Core Booking Database Schemas
+                  </h2>
+                  <pre className="p-4 rounded-lg bg-bg-surface border border-border-custom/80 text-[10px] font-mono text-green-400 overflow-x-auto leading-relaxed">
+{`CREATE TABLE tbl_picko_bookings (
+  BookingID VARCHAR(64) PRIMARY KEY,
+  CustomerID VARCHAR(64) NOT NULL,
+  SenderAddress TEXT NOT NULL,
+  ReceiverAddress TEXT NOT NULL,
+  PackageWeightDecimal DECIMAL(6,2) NOT NULL,
+  EstimatedCost DECIMAL(10,2) NOT NULL,
+  ActiveStatus VARCHAR(32) DEFAULT 'DISPATCHED',
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tbl_couriers (
+  CourierID VARCHAR(64) PRIMARY KEY,
+  CourierName VARCHAR(128) NOT NULL,
+  CurrentLat DECIMAL(9, 6) NOT NULL,
+  CurrentLng DECIMAL(9, 6) NOT NULL,
+  IsActive BOOLEAN DEFAULT TRUE
+);`}
+                  </pre>
+                </div>
+
+                <div className="flex flex-col gap-2 mt-4">
+                  <h2 className="text-sm font-bold text-text-primary tracking-wide flex items-center gap-2">
+                    <Terminal className="w-4 h-4 text-accent-gold" />
+                    3. Dispatch API Payload (JSON)
+                  </h2>
+                  <pre className="p-4 rounded-lg bg-bg-surface border border-border-custom/80 text-[10px] font-mono text-green-400 overflow-x-auto leading-relaxed">
+{`{
+  "dispatch": {
+    "booking_id": "PCK-90812-X",
+    "scheduled_at": "2025-02-28T10:00:00Z",
+    "courier_id": "CR-4012",
+    "delivery_route": {
+      "origin": [12.9716, 77.5946],
+      "destination": [12.2958, 76.6394],
+      "waypoints_count": 3
+    },
+    "metadata": {
+      "priority": "HIGH",
+      "signature_required": true
+    }
+  }
+}`}
+                  </pre>
+                </div>
+              </div>
+            )}
+
             {project.id === 'driverigt' && (
               <div className="flex flex-col gap-6 font-display">
                 <div className="border-b border-border-custom/30 pb-4">

@@ -23,6 +23,23 @@ export const Portfolio: React.FC = () => {
 
   const cases: ProjectCase[] = [
     {
+      id: 'picko',
+      title: 'Picko: Enterprise Delivery & Logistics Orchestration Platform',
+      client: 'Full-Stack Web Application & Logistics Architecture',
+      stat: 'Optimized Real-time Booking Engine',
+      situation: 'Courier and logistics operations struggle with dispatch scheduling delays, lack of transparent package tracking, and unoptimized booking routes that increase fuel costs and customer drop-off.',
+      transformation: 'Designed and engineered Picko, a high-performance logistics and booking web application. Integrated end-to-end package scheduling pipelines, responsive customer booking flows, and an optimized route scheduling engine built on modern React, custom APIs, and high-performance database schemas.',
+      results: [
+        'Built a seamless, fully-responsive customer portal for package drop-offs and scheduling.',
+        'Designed custom relational schemas tracking couriers, active routes, and dispatch coordinates.',
+        'Established sub-second route calculations and status notifications for end-to-end tracking transparency.'
+      ],
+      tech: ['React.js', 'Next.js', 'Logistics APIs', 'Tailwind CSS', 'Schema Design', 'Real-time Tracking'],
+      visualType: 'grid',
+      externalLink: 'https://www.picko.co.in/',
+      linkLabel: 'Visit Picko Application Web Portal'
+    },
+    {
       id: 'driverigt',
       title: 'DriveRigt: Frictionless Car Rental Product Design & Analytics Engine',
       client: 'Product Development & Design',
@@ -214,17 +231,28 @@ export const Portfolio: React.FC = () => {
                 <Shield className="w-4 h-4 text-accent-gold" />
                 <span className="font-mono text-[10px] uppercase tracking-wider">Unilateral NDA Secured Access</span>
               </div>
-              <button
-                onClick={() => {
-                  setSelectedProject(cs);
-                  setIsViewerOpen(true);
-                }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-surface border border-border-custom hover:border-brand-primary text-xs font-mono text-accent-gold hover:text-text-primary transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.4)] group cursor-pointer"
-              >
-                <FileText className="w-4 h-4 text-brand-primary group-hover:text-accent-gold transition-colors" />
-                <span>Interactive Workspace Specs</span>
-                <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </button>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={cs.externalLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-primary/10 hover:bg-brand-primary/20 border border-brand-primary/30 hover:border-brand-primary text-xs font-mono text-text-primary transition-all duration-300 cursor-pointer group"
+                >
+                  <span>{cs.linkLabel}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <button
+                  onClick={() => {
+                    setSelectedProject(cs);
+                    setIsViewerOpen(true);
+                  }}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-surface border border-border-custom hover:border-brand-primary text-xs font-mono text-accent-gold hover:text-text-primary transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.4)] group cursor-pointer"
+                >
+                  <FileText className="w-4 h-4 text-brand-primary group-hover:text-accent-gold transition-colors" />
+                  <span>Interactive Workspace Specs</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </button>
+              </div>
             </div>
           </CardGlass>
         ))}

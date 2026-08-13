@@ -75,7 +75,7 @@ Interests: ${selectedPillars.join(', ') || 'N/A'}
 Scheduled: ${dateStr} @ ${selectedTime}
 Bottleneck: ${formData.bottleneck || 'N/A'}`;
 
-    return `https://wa.me/917594835882?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/918891525552?text=${encodeURIComponent(text)}`;
   };
 
   const getMailtoLink = () => {
@@ -106,7 +106,7 @@ ${formData.bottleneck || 'N/A'}
 Best regards,
 ${formData.name}`);
 
-    return `mailto:insightforge.site@gmail.com?subject=${subject}&body=${body}`;
+    return `mailto:site.insightforge@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
