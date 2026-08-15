@@ -12,32 +12,32 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ABHILASH R',
       role: 'Lead AI & Automation Engineer',
       pedigree: 'AI Architect & Workflow Automation Specialist',
-      desc: 'Product Analyst at Amazon. Began his career engineering high-fidelity, feature-rich web platforms from scratch, later designing and shipping custom applications for small-scale business use cases and clients. Building on this solid full-stack engineering foundation, he transitioned into orchestrating complex workflow automations to replace manual operational tasks—architecting high-performance serverless AI logic',
-      specialty: 'Intelligent Automations',
+      desc: 'Product Analyst at Amazon. Began his career engineering high-fidelity, feature-rich web platforms from scratch, later designing and shipping custom applications for small-scale business use cases and clients. Building on this solid full-stack engineering foundation, he transitioned into orchestrating complex workflow automations to replace manual operational tasks—architecting high-performance serverless AI logic.',
+      specialty: 'AI, AUTOMATION & DIGITAL PRODUCTS',
       avatar: 'AR'
     },
     {
       name: 'RAHUL R',
       role: 'Data Scientist',
       pedigree: 'Advanced Statistical Modeling & Analytics Lead',
-      desc: 'Data Scientist with deep expertise in advanced statistical modeling and analytics. A dedicated data analyst and mathematical modeling expert who spent years building predictive analytics platforms. Leverages statistical modeling, Pandas/NumPy forecasting, and retention clustering.',
-      specialty: 'Predictive & Data Models',
+      desc: 'Senior Data Scientist at Elevate Labs with prior data science and analytics engineering experience at Knovista Technologies and Labmentix. Dedicated data analyst and mathematical modeling expert with deep experience building predictive analytics platforms, statistical forecasting algorithms, and customer retention clustering.',
+      specialty: 'DATA SCIENCE & ANALYTICS',
       avatar: 'RR'
     },
     {
       name: 'ANAND R',
       role: 'Data Engineer',
       pedigree: 'Enterprise Schema & Database Optimization Engineer',
-      desc: 'Data Engineer specializing in enterprise schema and database optimization. A structural database engineer who designs massive star-schema layouts and low-latency data warehouses. Highly skilled in building complex ETL transactional loops, database partitioning, and sub-second direct-query rendering.',
-      specialty: 'Schema & BI Engineering',
+      desc: 'Lead Data Engineer at Knovista Technologies with prior data engineering experience at Elevate Labs. Specialist in designing massive star-schema relational layouts, low-latency data warehouses, transactional ETL pipelines, database partitioning, and sub-second direct-query rendering.',
+      specialty: 'DATA ENGINEERING & BI',
       avatar: 'AN'
     },
     {
       name: 'ANANDHU SURESH',
-      role: 'Lead Growth & Product Marketing',
+      role: 'Product Growth Lead',
       pedigree: 'Product Strategist & Acquisition Architect',
-      desc: 'Growth & Product Marketing Lead. An acquisition specialist who maps user journeys, identifies structural market gaps, and leads full-funnel conversion rate optimization (CRO) strategies.',
-      specialty: 'Data-Driven Acquisition',
+      desc: 'Product Growth Lead at Labmentix with prior market research experience at Bibox Labs. Specialist in product strategy, mapping user acquisition journeys, identifying structural market gaps, and leading data-driven growth architectures.',
+      specialty: 'PRODUCT RESEARCH & MARKET INTELLIGENCE',
       avatar: 'AS'
     }
   ];
