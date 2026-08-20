@@ -65,7 +65,7 @@ export const DocViewer: React.FC<DocViewerProps> = ({ isOpen, onClose, project }
               <h3 className="font-display font-bold text-xl sm:text-2xl text-text-primary leading-tight">{project.title}</h3>
             </div>
             <a
-              href={project.externalLink || "https://linkedin.com"}
+              href={project.externalLink || "https://www.linkedin.com/in/insightforgesite"}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-brand-primary/10 hover:bg-brand-primary/20 border border-brand-primary/40 hover:border-brand-primary text-xs font-mono text-text-primary flex items-center gap-1.5 self-stretch sm:self-auto text-center justify-center transition-all cursor-pointer"

@@ -73,7 +73,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
         {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-text-secondary hover:text-text-primary focus:outline-none cursor-pointer"
+          className="lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center text-text-secondary hover:text-text-primary focus:outline-none cursor-pointer"
+          aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -90,9 +91,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
                   setCurrentPage(item.id);
                   setMobileMenuOpen(false);
                 }}
-                className={`w-full text-left py-3 px-4 rounded-lg font-display text-sm transition-all duration-200 cursor-pointer ${
+                className={`w-full text-left py-3.5 px-4 min-h-[44px] flex items-center rounded-lg font-display text-sm transition-all duration-200 cursor-pointer ${
                   currentPage === item.id
-                    ? 'text-accent-gold bg-bg-dark/80 border border-border-custom/80'
+                    ? 'text-accent-gold bg-bg-dark/80 border border-border-custom/80 font-semibold'
                     : 'text-text-secondary hover:text-text-primary hover:bg-bg-dark/30'
                 }`}
               >
@@ -104,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
                 setCurrentPage('contact');
                 setMobileMenuOpen(false);
               }}
-              className="mt-4 w-full flex items-center justify-center gap-2 py-3 rounded-lg font-mono text-xs text-accent-gold border border-accent-gold/30 hover:bg-accent-gold/10 transition-all duration-200 cursor-pointer"
+              className="mt-4 w-full flex items-center justify-center gap-2 py-3.5 min-h-[44px] rounded-lg font-mono text-xs text-accent-gold border border-accent-gold/30 hover:bg-accent-gold/10 transition-all duration-200 cursor-pointer"
             >
               <Terminal className="w-4 h-4" />
               <span>Schedule Audit</span>

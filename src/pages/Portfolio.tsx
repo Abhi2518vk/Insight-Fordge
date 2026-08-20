@@ -87,7 +87,7 @@ export const Portfolio: React.FC = () => {
       ],
       tech: ['Power BI', 'MySQL Database', 'Star-Schema Modeling', 'ETL Data Cleaning', 'Excel Consolidation'],
       visualType: 'chart',
-      externalLink: 'https://linkedin.com',
+      externalLink: 'https://www.linkedin.com/in/insightforgesite',
       linkLabel: 'View Project on LinkedIn'
     }
   ];
