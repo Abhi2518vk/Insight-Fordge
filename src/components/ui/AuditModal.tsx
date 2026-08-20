@@ -9,10 +9,15 @@ interface AuditModalProps {
 export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
-      const originalStyle = window.getComputedStyle(document.body).overflow;
+      const originalBodyOverflow = document.body.style.overflow;
+      const originalHtmlOverflow = document.documentElement.style.overflow;
+
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+
       return () => {
-        document.body.style.overflow = originalStyle;
+        document.body.style.overflow = originalBodyOverflow;
+        document.documentElement.style.overflow = originalHtmlOverflow;
       };
     }
   }, [isOpen]);
@@ -147,7 +152,7 @@ ${formData.name}`);
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-bg-dark/80 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-bg-dark/80 backdrop-blur-md transition-opacity touch-none"
         onClick={onClose}
       />
 
