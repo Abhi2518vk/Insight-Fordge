@@ -37,7 +37,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </h1>
 
             <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
-              We design and build end-to-end data analysis dashboards, custom web development, web design, and software building, with end-to-end automations. We engineer high-performance software systems for your core operational bottlenecks.
+              We build custom web platforms, data dashboards, software applications, and automated business workflows. Our senior partners engineer reliable systems to solve your core operational bottlenecks.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
@@ -137,7 +137,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             We solve operational bottlenecks through precision technology.
           </h2>
           <p className="text-text-secondary text-sm">
-            We bypass unneeded agency bloat. Our partners design, execute, and deliver fully production-ready architectures directly to your team.
+            We work without agency bloat. Our senior partners design and build production-ready systems directly for your team.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Web, Software & Product Engineering</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                We design and build bespoke high-fidelity web platforms, corporate websites, SaaS applications, and robust custom software. Our principal leads write type-safe React, Next.js, and TypeScript code to deploy scalable, cloud-native solutions.
+                We design and build custom web platforms, corporate websites, SaaS applications, and enterprise software. Our team uses modern React, Next.js, and TypeScript to deploy fast, scalable cloud solutions.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -166,7 +166,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="font-display font-semibold text-lg text-text-primary mb-3">AI Automation & Tech Consulting</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                Replace manual, repetitive business workflows with custom serverless AI integrations, rate-limited API webhooks, and secure CRM-ERP synchronizations that execute flawlessly 24/7.
+                Replace repetitive manual workflows with custom AI integrations, automated webhooks, and secure CRM-ERP connections that run reliably 24/7.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -183,7 +183,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="font-display font-semibold text-lg text-text-primary mb-3">Data Analytics & BI</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                We engineer optimized relational database schemas and transactional ETL/data pipelines, delivering sub-second direct-query rendering inside premium Power BI, Tableau, and custom web dashboards.
+                We design optimized database schemas and data pipelines, delivering fast query speeds inside Power BI, Tableau, and custom web dashboards.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -195,47 +195,6 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. Deep-dive Telemetry Intro */}
-      <section className="py-24 bg-bg-surface/20 border-t border-border-custom">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          <div className="lg:col-span-5 flex flex-col items-start gap-6">
-            <span className="font-mono text-xs text-brand-primary uppercase tracking-widest font-semibold">Active Demonstration</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-text-primary">
-              Watch our telemetry and querying engines in action.
-            </h2>
-            <p className="text-text-secondary text-sm leading-relaxed">
-              We do not ask clients to trust empty sales copy. Trigger our simulated direct-query telemetry sandbox above or deep-dive into our active client project architectures in our Portfolio.
-            </p>
-            <button
-              onClick={() => setCurrentPage('portfolio')}
-              className="font-mono text-xs text-accent-gold border-b border-accent-gold hover:text-text-primary hover:border-text-primary transition-colors pb-1 cursor-pointer"
-            >
-              Explore all projects &rarr;
-            </button>
-          </div>
-          <div className="lg:col-span-7 w-full bg-bg-surface border border-border-custom rounded-xl p-8 flex flex-col gap-6">
-            <span className="font-mono text-[10px] text-accent-gold uppercase tracking-widest">Platform Telemetry Spec</span>
-            <div className="flex flex-col gap-4">
-              <div className="flex justify-between items-center pb-2 border-b border-border-custom/30 text-xs">
-                <span className="text-text-secondary font-mono">Query Execution Engine</span>
-                <span className="text-text-primary font-mono font-semibold">Snowflake Warehouse (M-Size)</span>
-              </div>
-              <div className="flex justify-between items-center pb-2 border-b border-border-custom/30 text-xs">
-                <span className="text-text-secondary font-mono">Aggregation Interval</span>
-                <span className="text-text-primary font-mono font-semibold">Real-time (Direct-Query)</span>
-              </div>
-              <div className="flex justify-between items-center pb-2 border-b border-border-custom/30 text-xs">
-                <span className="text-text-secondary font-mono">Security Compliance</span>
-                <span className="text-text-primary font-mono font-semibold">TLS 1.3 / AES-256 Encrypted</span>
-              </div>
-              <div className="flex justify-between items-center text-xs">
-                <span className="text-text-secondary font-mono">Data Validation Framework</span>
-                <span className="text-text-primary font-mono font-semibold">Python Great Expectations Suite</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 5. Unified CTA Block */}
       <section className="py-24 max-w-7xl mx-auto px-6">

@@ -14,7 +14,35 @@ import { Insights } from './pages/Insights';
 import { Contact } from './pages/Contact';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<string>('home');
+  // Initialize currentPage from window.location.pathname for direct deep-linking support
+  const getInitialPage = () => {
+    const path = window.location.pathname.replace(/^\//, '').toLowerCase();
+    const validPages = ['home', 'about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
+    return validPages.includes(path) ? path : 'home';
+  };
+
+  const [currentPage, setCurrentPage] = useState<string>(getInitialPage());
+
+  // Listen for browser back/forward popstate events
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.replace(/^\//, '').toLowerCase();
+      const validPages = ['home', 'about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
+      setCurrentPage(validPages.includes(path) ? path : 'home');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Custom navigation handler updating state and browser address bar
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+    const newPath = page === 'home' ? '/' : `/${page}`;
+    if (window.location.pathname !== newPath) {
+      window.history.pushState({}, '', newPath);
+    }
+  };
 
   // Scroll to top automatically and set route-specific SEO titles & Open Graph metadata
   useEffect(() => {
@@ -101,9 +129,9 @@ export default function App() {
   const renderActivePage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home setCurrentPage={setCurrentPage} />;
+        return <Home setCurrentPage={handlePageChange} />;
       case 'about':
-        return <About setCurrentPage={setCurrentPage} />;
+        return <About setCurrentPage={handlePageChange} />;
       case 'services':
         return <Services />;
       case 'industries':
@@ -117,19 +145,19 @@ export default function App() {
       case 'contact':
         return <Contact />;
       default:
-        return <Home setCurrentPage={setCurrentPage} />;
+        return <Home setCurrentPage={handlePageChange} />;
     }
   };
 
   return (
     <div className="min-h-screen bg-bg-dark text-text-primary flex flex-col justify-between selection:bg-brand-primary selection:text-text-primary">
       <div>
-        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Header currentPage={currentPage} setCurrentPage={handlePageChange} />
         <main className="animate-fade-in pb-12">
           {renderActivePage()}
         </main>
       </div>
-      <Footer setCurrentPage={setCurrentPage} />
+      <Footer setCurrentPage={handlePageChange} />
       <WhatsAppButton />
     </div>
   );

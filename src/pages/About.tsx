@@ -20,7 +20,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'RAHUL R',
       role: 'Data Scientist',
       pedigree: 'Advanced Statistical Modeling & Analytics Lead',
-      desc: 'Senior Data Scientist at Elevate Labs with prior data science and analytics engineering experience at Knovista Technologies and Labmentix. Dedicated data analyst and mathematical modeling expert with deep experience building predictive analytics platforms, statistical forecasting algorithms, and customer retention clustering.',
+      desc: 'Data Scientist with experience at Elevate Labs, Knovista Technologies, and Labmentix. Dedicated data analyst and mathematical modeling expert with deep experience building predictive analytics platforms, statistical forecasting algorithms, and customer retention clustering.',
       specialty: 'DATA SCIENCE & ANALYTICS',
       avatar: 'RR'
     },
@@ -28,15 +28,15 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
       name: 'ANAND R',
       role: 'Data Engineer',
       pedigree: 'Enterprise Schema & Database Optimization Engineer',
-      desc: 'Lead Data Engineer at Knovista Technologies with prior data engineering experience at Elevate Labs. Specialist in designing massive star-schema relational layouts, low-latency data warehouses, transactional ETL pipelines, database partitioning, and sub-second direct-query rendering.',
+      desc: 'Data Engineer with experience at Knovista Technologies and Elevate Labs. Specialist in designing massive star-schema relational layouts, low-latency data warehouses, transactional ETL pipelines, database partitioning, and sub-second direct-query rendering.',
       specialty: 'DATA ENGINEERING & BI',
       avatar: 'AN'
     },
     {
       name: 'ANANDHU SURESH',
-      role: 'Product Growth Lead',
+      role: 'GROWTH & PRODUCT MARKETING',
       pedigree: 'Product Strategist & Acquisition Architect',
-      desc: 'Product Growth Lead at Labmentix with prior market research experience at Bibox Labs. Specialist in product strategy, mapping user acquisition journeys, identifying structural market gaps, and leading data-driven growth architectures.',
+      desc: 'Product growth strategist with experience at Labmentix and market research experience at Bibox Labs. Specialist in mapping user acquisition journeys, identifying structural market gaps, and leading data-driven growth architectures.',
       specialty: 'PRODUCT RESEARCH & MARKET INTELLIGENCE',
       avatar: 'AS'
     }
@@ -51,7 +51,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
           Senior Architectural Leadership. No Delegation to Juniors.
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          At Insight Forge, we do not run a traditional bloated agency or an offshore subcontractor pool. We are a specialized partnership of four senior engineering and product growth leaders who personally write, review, and deploy your critical database pipelines and applications.
+          At Insight Forge, we do not use offshore subcontractor pools or account managers. We are a team of four senior engineering and product growth partners who personally build, review, and deploy your systems.
         </p>
       </div>
 

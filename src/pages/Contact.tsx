@@ -77,7 +77,7 @@ Bottleneck: ${formData.bottleneck || 'N/A'}`;
           Initiate Your Project Architecture Audit.
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          Submit your query to receive custom database designs and pipeline models. All submission coordinates are automatically protected under our unilateral NDA protocol and escalated directly to our principal partners.
+          Submit your inquiry to receive custom technical recommendations. All submitted information is automatically protected under our NDA protocol and reviewed directly by our partners.
         </p>
       </div>
 

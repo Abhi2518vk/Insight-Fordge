@@ -318,29 +318,52 @@ ${formData.name}`);
                     </div>
                   </div>
 
-                  {/* Time slots */}
+                  {/* Time slots - grouped into semantic sub-containers to prevent flat DOM node warnings */}
                   <div className="flex flex-col gap-3">
                     <span className="font-mono text-[9px] text-text-secondary uppercase tracking-widest flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5 text-brand-primary" />
                       Select Audit Time (Your Local Timezone)
                     </span>
-                    <div className="flex flex-wrap gap-2">
-                      {timeSlots.map((slot, idx) => {
-                        const isSelected = selectedTime === slot;
-                        return (
-                          <button
-                            key={idx}
-                            onClick={() => setSelectedTime(slot)}
-                            className={`px-4 py-2 rounded-lg border font-mono text-xs transition-all cursor-pointer ${
-                              isSelected
-                                ? 'bg-brand-primary/15 border-brand-primary text-text-primary'
-                                : 'bg-bg-dark border-border-custom text-text-secondary hover:text-text-primary'
-                            }`}
-                          >
-                            {slot}
-                          </button>
-                        );
-                      })}
+                    <div className="flex flex-col gap-3">
+                      {/* Morning slots group */}
+                      <div className="flex flex-wrap gap-2">
+                        {timeSlots.filter(s => s.includes('AM')).map((slot, idx) => {
+                          const isSelected = selectedTime === slot;
+                          return (
+                            <button
+                              key={`am-${idx}`}
+                              onClick={() => setSelectedTime(slot)}
+                              className={`px-4 py-2 rounded-lg border font-mono text-xs transition-all cursor-pointer ${
+                                isSelected
+                                  ? 'bg-brand-primary/15 border-brand-primary text-text-primary font-semibold'
+                                  : 'bg-bg-dark border-border-custom text-text-secondary hover:text-text-primary'
+                              }`}
+                            >
+                              {slot}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {/* Afternoon/Evening slots group */}
+                      <div className="flex flex-wrap gap-2">
+                        {timeSlots.filter(s => s.includes('PM')).map((slot, idx) => {
+                          const isSelected = selectedTime === slot;
+                          return (
+                            <button
+                              key={`pm-${idx}`}
+                              onClick={() => setSelectedTime(slot)}
+                              className={`px-4 py-2 rounded-lg border font-mono text-xs transition-all cursor-pointer ${
+                                isSelected
+                                  ? 'bg-brand-primary/15 border-brand-primary text-text-primary font-semibold'
+                                  : 'bg-bg-dark border-border-custom text-text-secondary hover:text-text-primary'
+                              }`}
+                            >
+                              {slot}
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
 

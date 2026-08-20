@@ -91,7 +91,7 @@ export const Services: React.FC = () => {
           Three Core Service Pillars. End-To-End System Execution.
         </h1>
         <p className="text-text-secondary text-base leading-relaxed">
-          We engineer systems that convert complex operations into decisive action. Click each pillar below to investigate detailed technical checklists, deliverables, and tech stack configurations.
+          We build systems that streamline complex business operations. Select a pillar below to review technical checklists, key deliverables, and technology stacks.
         </p>
       </div>
 
