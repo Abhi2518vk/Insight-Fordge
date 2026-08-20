@@ -14,6 +14,7 @@ const Portfolio = lazy(() => import('./pages/Portfolio').then(m => ({ default: m
 const Process = lazy(() => import('./pages/Process').then(m => ({ default: m.Process })));
 const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.Insights })));
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 const PageFallback = () => (
   <div className="py-24 max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center min-h-[40vh]">
@@ -26,8 +27,9 @@ export default function App() {
   // Initialize currentPage from window.location.pathname for direct deep-linking support
   const getInitialPage = () => {
     const path = window.location.pathname.replace(/^\//, '').toLowerCase();
-    const validPages = ['home', 'about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
-    return validPages.includes(path) ? path : 'home';
+    if (!path || path === 'home') return 'home';
+    const validPages = ['about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
+    return validPages.includes(path) ? path : '404';
   };
 
   const [currentPage, setCurrentPage] = useState<string>(getInitialPage());
@@ -36,8 +38,12 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\//, '').toLowerCase();
-      const validPages = ['home', 'about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
-      setCurrentPage(validPages.includes(path) ? path : 'home');
+      if (!path || path === 'home') {
+        setCurrentPage('home');
+        return;
+      }
+      const validPages = ['about', 'services', 'industries', 'portfolio', 'process', 'insights', 'contact'];
+      setCurrentPage(validPages.includes(path) ? path : '404');
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -97,6 +103,11 @@ export default function App() {
         title: 'Contact & System Audit — Insight Forge',
         desc: 'Schedule a 30-minute partner-led architecture audit and receive direct database and software diagnostics under unilateral NDA.',
         url: 'https://www.insight-forge.site/contact'
+      },
+      '404': {
+        title: '404 — Page Not Found | Insight Forge',
+        desc: 'The requested URL endpoint or system route does not exist in our active architecture matrix.',
+        url: 'https://www.insight-forge.site/404'
       }
     };
 
@@ -153,8 +164,10 @@ export default function App() {
         return <Suspense fallback={<PageFallback />}><Insights /></Suspense>;
       case 'contact':
         return <Suspense fallback={<PageFallback />}><Contact /></Suspense>;
+      case '404':
+        return <Suspense fallback={<PageFallback />}><NotFound setCurrentPage={handlePageChange} /></Suspense>;
       default:
-        return <Home setCurrentPage={handlePageChange} />;
+        return <Suspense fallback={<PageFallback />}><NotFound setCurrentPage={handlePageChange} /></Suspense>;
     }
   };
 
