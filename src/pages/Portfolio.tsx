@@ -178,7 +178,7 @@ export const Portfolio: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-8 pb-6 border-b border-border-custom">
               <div>
                 <span className="font-mono text-xs text-accent-gold uppercase tracking-widest block mb-1">{cs.client}</span>
-                <h3 className="font-display font-semibold text-xl sm:text-2xl text-text-primary leading-tight hover:text-brand-primary transition-colors duration-300">{cs.title}</h3>
+                <h2 className="font-display font-semibold text-xl sm:text-2xl text-text-primary leading-tight hover:text-brand-primary transition-colors duration-300">{cs.title}</h2>
               </div>
               <div className="bg-brand-primary/10 border border-brand-primary/30 px-4 py-2 rounded-lg font-mono text-xs text-brand-primary font-semibold uppercase tracking-wider flex-shrink-0">
                 {cs.stat}
@@ -212,7 +212,7 @@ export const Portfolio: React.FC = () => {
               {/* Right content quantified results checklist */}
               <div className="lg:col-span-5 bg-bg-dark/60 border border-border-custom/80 rounded-xl p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="font-display font-medium text-xs text-text-primary uppercase tracking-wider mb-6 pb-2 border-b border-border-custom/50">3. Quantified Business Results</h4>
+                  <h3 className="font-display font-medium text-xs text-text-primary uppercase tracking-wider mb-6 pb-2 border-b border-border-custom/50">3. Quantified Business Results</h3>
                   <ul className="flex flex-col gap-4">
                     {cs.results.map((r, i) => (
                       <li key={i} className="flex items-start gap-3">

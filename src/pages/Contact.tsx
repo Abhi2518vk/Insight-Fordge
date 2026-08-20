@@ -85,7 +85,7 @@ Bottleneck: ${formData.bottleneck || 'N/A'}`;
         {/* Left column - Pedigree channels */}
         <div className="lg:col-span-5 flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <h4 className="font-display font-medium text-text-primary uppercase tracking-wider text-xs">Direct Partner Channels</h4>
+            <h2 className="font-display font-medium text-text-primary uppercase tracking-wider text-xs">Direct Partner Channels</h2>
             <p className="text-text-secondary text-xs">Skip the sales queues and write directly to our principal leads.</p>
           </div>
 
@@ -164,7 +164,7 @@ Bottleneck: ${formData.bottleneck || 'N/A'}`;
               <div className="w-14 h-14 rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center text-accent-gold mb-2">
                 <Terminal className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-semibold text-xl text-text-primary">Inquiry Securely Logged & Transmitted</h3>
+              <h2 className="font-display font-semibold text-xl text-text-primary">Inquiry Securely Logged & Transmitted</h2>
               <p className="text-text-secondary text-sm leading-relaxed max-w-md">
                 Your specifications have been securely parsed and encrypted in our partner pipeline. ABHILASH R and ANAND R have been assigned as your lead auditors.
               </p>

@@ -47,7 +47,7 @@ export const DashboardDemo: React.FC = () => {
             {details.icon}
           </div>
           <div>
-            <h4 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider">LIVE TELEMETRY WORKSPACE</h4>
+            <h3 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider">LIVE TELEMETRY WORKSPACE</h3>
             <span className="text-[11px] font-mono text-text-secondary">SYSTEM CONSOLE STATE: <span className="text-green-500 font-semibold animate-pulse">● SECURE & ACTIVE</span></span>
           </div>
         </div>

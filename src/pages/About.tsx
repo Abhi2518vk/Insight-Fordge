@@ -66,7 +66,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-display font-bold text-lg text-text-primary group-hover:text-accent-gold transition-colors duration-300">{partner.name}</h3>
+                <h2 className="font-display font-bold text-lg text-text-primary group-hover:text-accent-gold transition-colors duration-300">{partner.name}</h2>
                 <p className="font-mono text-xs text-brand-secondary tracking-wide uppercase font-semibold">{partner.role}</p>
                 <p className="text-text-secondary text-xs sm:text-[13px] leading-relaxed mt-3">{partner.desc}</p>
               </div>
@@ -87,7 +87,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
           <div className="flex gap-4">
             <Users className="w-6 h-6 text-brand-primary flex-shrink-0" />
             <div>
-              <h4 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Zero Handoffs</h4>
+              <h3 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Zero Handoffs</h3>
               <p className="text-text-secondary text-xs leading-relaxed">
                 You work directly with principal leaders. This avoids lost requirements, misaligned specs, and endless project managers.
               </p>
@@ -96,7 +96,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
           <div className="flex gap-4">
             <Cpu className="w-6 h-6 text-accent-gold flex-shrink-0" />
             <div>
-              <h4 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Production-Ready Code</h4>
+              <h3 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Production-Ready Code</h3>
               <p className="text-text-secondary text-xs leading-relaxed">
                 We write clean, type-safe Next.js, React, and SQL queries out of the box, avoiding unoptimized logic and fragile connections.
               </p>
@@ -105,7 +105,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
           <div className="flex gap-4">
             <FileCode className="w-6 h-6 text-green-500 flex-shrink-0" />
             <div>
-              <h4 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Total IP Handoff</h4>
+              <h3 className="font-display font-medium text-text-primary text-sm uppercase tracking-wider mb-2">Total IP Handoff</h3>
               <p className="text-text-secondary text-xs leading-relaxed">
                 You own 100% of the repository, database scripts, and AWS/Docker configurations. No custom proprietary vendor locks.
               </p>

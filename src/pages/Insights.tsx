@@ -88,9 +88,9 @@ export const Insights: React.FC = () => {
                 <span className="font-mono text-[10px] text-text-secondary">{art.read}</span>
               </div>
 
-              <h3 className="font-display font-semibold text-base sm:text-lg text-text-primary group-hover:text-accent-gold transition-colors duration-300 line-clamp-3">
+              <h2 className="font-display font-semibold text-base sm:text-lg text-text-primary group-hover:text-accent-gold transition-colors duration-300 line-clamp-3">
                 {art.title}
-              </h3>
+              </h2>
 
               <p className="text-text-secondary text-xs leading-relaxed line-clamp-4">
                 {art.desc}
@@ -115,7 +115,7 @@ export const Insights: React.FC = () => {
       <CardGlass className="p-8 sm:p-12 border-accent-gold/20 relative overflow-hidden bg-gradient-to-r from-bg-surface to-bg-dark">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-4">
-            <h3 className="font-display font-semibold text-xl text-text-primary tracking-tight">Subscribe to our Systems Engineering Newsletter</h3>
+            <h2 className="font-display font-semibold text-xl text-text-primary tracking-tight">Subscribe to our Systems Engineering Newsletter</h2>
             <p className="text-text-secondary text-xs sm:text-sm">
               We send out desaturated schema diagrams, direct SQL queries, and serverless performance scripts. Zero promotional spam, strictly technical analysis.
             </p>

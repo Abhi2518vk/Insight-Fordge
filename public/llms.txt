@@ -1,0 +1,22 @@
+# Insight Forge
+
+> Premium Technology Consulting & System Architecture
+
+Insight Forge is an elite technology consulting firm specializing in Web & Software Engineering, Business Intelligence & Data Analytics, AI Business Automation, and Product Strategy.
+
+## Core Capabilities & Key Pages
+
+- [Homepage](https://www.insight-forge.site/): Overview of core capabilities, trust signals, and system architecture consulting.
+- [Services](https://www.insight-forge.site/services): Three primary service pillars: Web & Software Engineering, AI & Business Automation, and Business Intelligence & Data Analytics.
+- [Portfolio & Case Studies](https://www.insight-forge.site/portfolio): Interactive project sandboxes, transactional ETL systems, SaaS prototypes, and custom logistics platforms.
+- [Industries Served](https://www.insight-forge.site/industries): Technology solutions for Manufacturing, Retail, Healthcare, Logistics, Automotive, Finance, and SaaS.
+- [Engineering Process](https://www.insight-forge.site/process): Double-track methodology for Data Analytics and Software Engineering discovery, development, and handover.
+- [Technical Insights](https://www.insight-forge.site/insights): Research reports, SQL optimization benchmarks, serverless webhook strategies, and direct-query BI deep-dives.
+- [About Us](https://www.insight-forge.site/about): Partner team profiles and execution standards.
+- [Contact & Architecture Audit](https://www.insight-forge.site/contact): Schedule a 30-minute partner-led system audit under mutual NDA.
+
+## Contact Information
+
+- Email: site.insightforge@gmail.com
+- Phone / WhatsApp: +91 8891 525 552
+- Official LinkedIn: https://www.linkedin.com/in/insightforgesite

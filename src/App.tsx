@@ -1,17 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Header } from './components/global/Header';
 import { Footer } from './components/global/Footer';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 
-// Pages
+// Eager load Home page for instant initial paint
 import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Services } from './pages/Services';
-import { Industries } from './pages/Industries';
-import { Portfolio } from './pages/Portfolio';
-import { Process } from './pages/Process';
-import { Insights } from './pages/Insights';
-import { Contact } from './pages/Contact';
+
+// Lazy load non-critical secondary pages to minimize initial JavaScript bundle size
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Services = lazy(() => import('./pages/Services').then(m => ({ default: m.Services })));
+const Industries = lazy(() => import('./pages/Industries').then(m => ({ default: m.Industries })));
+const Portfolio = lazy(() => import('./pages/Portfolio').then(m => ({ default: m.Portfolio })));
+const Process = lazy(() => import('./pages/Process').then(m => ({ default: m.Process })));
+const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.Insights })));
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+
+const PageFallback = () => (
+  <div className="py-24 max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center min-h-[40vh]">
+    <div className="w-8 h-8 border-2 border-brand-primary border-t-transparent rounded-full animate-spin mb-4" />
+    <span className="font-mono text-xs text-text-secondary uppercase tracking-widest">Loading Module...</span>
+  </div>
+);
 
 export default function App() {
   // Initialize currentPage from window.location.pathname for direct deep-linking support
@@ -131,19 +140,19 @@ export default function App() {
       case 'home':
         return <Home setCurrentPage={handlePageChange} />;
       case 'about':
-        return <About setCurrentPage={handlePageChange} />;
+        return <Suspense fallback={<PageFallback />}><About setCurrentPage={handlePageChange} /></Suspense>;
       case 'services':
-        return <Services />;
+        return <Suspense fallback={<PageFallback />}><Services /></Suspense>;
       case 'industries':
-        return <Industries />;
+        return <Suspense fallback={<PageFallback />}><Industries /></Suspense>;
       case 'portfolio':
-        return <Portfolio />;
+        return <Suspense fallback={<PageFallback />}><Portfolio /></Suspense>;
       case 'process':
-        return <Process />;
+        return <Suspense fallback={<PageFallback />}><Process /></Suspense>;
       case 'insights':
-        return <Insights />;
+        return <Suspense fallback={<PageFallback />}><Insights /></Suspense>;
       case 'contact':
-        return <Contact />;
+        return <Suspense fallback={<PageFallback />}><Contact /></Suspense>;
       default:
         return <Home setCurrentPage={handlePageChange} />;
     }

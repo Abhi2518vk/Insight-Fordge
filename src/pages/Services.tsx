@@ -115,7 +115,7 @@ export const Services: React.FC = () => {
             </div>
             <div className="flex flex-col gap-2">
               <span className="font-mono text-[11px] uppercase tracking-widest text-accent-gold font-bold block">{p.tag}</span>
-              <h3 className="font-display font-bold text-lg sm:text-xl lg:text-2xl tracking-tight mt-1 leading-snug">{p.title}</h3>
+              <h2 className="font-display font-bold text-lg sm:text-xl lg:text-2xl tracking-tight mt-1 leading-snug">{p.title}</h2>
             </div>
           </button>
         ))}
@@ -148,10 +148,10 @@ export const Services: React.FC = () => {
 
             {/* Panel Right - Deliverables Checklist */}
             <div className="lg:col-span-7 bg-bg-dark/80 border border-border-custom/80 rounded-2xl p-8 sm:p-10 shadow-2xl">
-              <h4 className="font-display font-bold text-sm text-text-primary uppercase tracking-wider mb-8 pb-3 border-b border-border-custom/50 flex items-center gap-2">
+            <h3 className="font-display font-bold text-sm text-text-primary uppercase tracking-wider mb-8 pb-3 border-b border-border-custom/50 flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-brand-primary" />
                 <span>Core Architectural Milestones</span>
-              </h4>
+            </h3>
               <ul className="flex flex-col gap-6">
                 {currentPillar.details.map((item, idx) => {
                   const parts = item.split(': ');

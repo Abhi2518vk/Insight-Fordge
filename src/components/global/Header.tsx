@@ -29,11 +29,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
           className="flex items-center gap-3 cursor-pointer group"
         >
           <div className="relative h-11 flex items-center justify-center rounded-lg border border-border-custom bg-bg-surface p-1 group-hover:border-brand-primary transition-all duration-300 overflow-hidden">
-            <img
-              src="/logo.png"
-              alt="Insight Forge Logo"
-              className="h-full w-auto object-contain transition-all duration-300 group-hover:brightness-110"
-            />
+            <picture>
+              <source srcSet="/logo.webp" type="image/webp" />
+              <img
+                src="/logo.png"
+                alt="Insight Forge Logo"
+                width="120"
+                height="77"
+                className="h-full w-auto object-contain transition-all duration-300 group-hover:brightness-110"
+              />
+            </picture>
             <div className="absolute -inset-0.5 bg-brand-primary/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10" />
           </div>
           <div className="flex flex-col">
