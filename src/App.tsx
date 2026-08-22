@@ -65,8 +65,8 @@ export default function App() {
 
     const pageMetaMap: Record<string, { title: string; desc: string; url: string }> = {
       home: {
-        title: 'Insight Forge — Web Dev, BI, AI & Software Consulting',
-        desc: 'Data analytics, business intelligence, website development, software engineering, and AI automation — full-stack technology consulting.',
+        title: 'Insight Forge — Data Analytics, Website Development & Software Services',
+        desc: 'Insight Forge provides professional data analytics, custom website development, business intelligence, and software development services to scale your business.',
         url: 'https://www.insight-forge.site/'
       },
       about: {
